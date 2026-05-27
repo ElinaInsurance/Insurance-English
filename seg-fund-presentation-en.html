@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="Segregated Fund — Complete Guide 2026">
+<meta property="og:description" content="Why Seg Funds outperform Mutual Funds and ETFs for Canadian investors">
+<title>Segregated Fund Complete Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8CC7A;
+    --dark: #0A0E1A;
+    --dark2: #111827;
+    --dark3: #1A2235;
+    --accent: #2D6BE4;
+    --accent2: #34C77B;
+    --text: #F0EDE8;
+    --text-muted: #A8A098;
+    --red: #E85555;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── SLIDE WRAPPER ── */
+  .slide {
+    min-height: 100vh;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 48px 28px 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    overflow: hidden;
+  }
+  .slide::before {
+    content: '';
+    position: absolute;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(45,107,228,0.12) 0%, transparent 70%);
+    top: -80px; right: -80px;
+    pointer-events: none;
+  }
+
+  /* ── SLIDE NUMBERS ── */
+  .slide-num {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+
+  /* ── SLIDE TITLES ── */
+  .slide-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .slide-title .gold { color: var(--gold); }
+  .slide-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+
+  /* ── BODY TEXT ── */
+  p.body { font-size: 14px; line-height: 1.8; color: #D4CECC; margin-bottom: 16px; }
+  p.body strong { color: var(--gold-light); font-weight: 500; }
+
+  /* ── HERO SLIDE ── */
+  .hero {
+    background: linear-gradient(160deg, #0A0E1A 0%, #0F1726 50%, #0A1628 100%);
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 80px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 200px;
+    background: linear-gradient(transparent, rgba(201,168,76,0.05));
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .hero-title .sub {
+    display: block;
+    font-size: 18px;
+    color: var(--gold);
+    margin-top: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  .hero-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 360px;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .stat-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-label { font-size: 10px; color: var(--text-muted); line-height: 1.3; }
+
+  /* ── INFO CARDS ── */
+  .info-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+  .info-card .card-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+  .info-card .card-title { font-size: 13px; font-weight: 700; color: var(--gold-light); margin-bottom: 6px; }
+  .info-card .card-body { font-size: 12.5px; color: #C8C3BF; line-height: 1.7; }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-left: 3px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  .highlight-box .hb-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  .highlight-box .hb-body { font-size: 13px; line-height: 1.75; color: #D8D3CF; }
+
+  /* ── COMPARISON TABLE ── */
+  .compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    font-size: 11.5px;
+  }
+  .compare-table th {
+    padding: 10px 8px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  .compare-table th:first-child { text-align: left; color: var(--text-muted); }
+  .compare-table th.seg { color: var(--gold); background: rgba(201,168,76,0.08); border-radius: 8px 8px 0 0; }
+  .compare-table th.mutual { color: #7DB3FF; }
+  .compare-table th.etf { color: #A8A098; }
+  .compare-table td {
+    padding: 9px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+    color: #C0BAB5;
+    vertical-align: middle;
+  }
+  .compare-table td:first-child { text-align: left; color: #D8D3CF; font-weight: 500; }
+  .compare-table td.seg { background: rgba(201,168,76,0.05); color: var(--gold-light); font-weight: 600; }
+  .tick { color: var(--accent2); font-size: 14px; }
+  .cross { color: var(--red); font-size: 14px; }
+  .partial { color: #F59E0B; font-size: 14px; }
+
+  /* ── PRO/CON LISTS ── */
+  .pro-con { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .pro-box, .con-box { border-radius: 10px; padding: 16px; }
+  .pro-box { background: rgba(52,199,123,0.07); border: 1px solid rgba(52,199,123,0.2); }
+  .con-box { background: rgba(232,85,85,0.07); border: 1px solid rgba(232,85,85,0.2); }
+  .pro-box .box-title { color: var(--accent2); font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .con-box .box-title { color: var(--red); font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+  .pro-box li, .con-box li {
+    font-size: 11.5px; line-height: 1.65; color: #C8C3BF;
+    list-style: none; padding-left: 14px; position: relative; margin-bottom: 6px;
+  }
+  .pro-box li::before { content: '✓'; position: absolute; left: 0; color: var(--accent2); font-weight: 700; }
+  .con-box li::before { content: '×'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+  /* ── SCENARIO CARDS ── */
+  .scenario-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px; padding: 16px; margin-bottom: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .scenario-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+  .scenario-title { font-size: 13px; font-weight: 700; color: var(--gold-light); margin-bottom: 4px; }
+  .scenario-body { font-size: 12px; color: #B8B3AF; line-height: 1.65; }
+
+  /* ── DEATH BENEFIT SECTION ── */
+  .death-flow { display: flex; flex-direction: column; gap: 0; margin-bottom: 20px; }
+  .flow-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .flow-item:last-child { border-bottom: none; }
+  .flow-circle {
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0; margin-top: 2px;
+  }
+  .flow-circle.gold { background: rgba(201,168,76,0.15); border: 1.5px solid var(--gold); }
+  .flow-circle.green { background: rgba(52,199,123,0.1); border: 1.5px solid var(--accent2); }
+  .flow-circle.blue { background: rgba(45,107,228,0.12); border: 1.5px solid var(--accent); }
+  .flow-title { font-size: 13px; font-weight: 700; color: #E8E3DF; margin-bottom: 4px; }
+  .flow-body { font-size: 12px; color: #A8A3A0; line-height: 1.65; }
+
+  /* ── DEATH COMPARE TABLE ── */
+  .death-compare {
+    background: rgba(255,255,255,0.03); border-radius: 12px;
+    overflow: hidden; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.07);
+  }
+  .dc-row { display: grid; grid-template-columns: 1.3fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .dc-row:last-child { border-bottom: none; }
+  .dc-cell { padding: 10px 12px; font-size: 11.5px; color: #C0BAB5; }
+  .dc-cell.header {
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--text-muted); background: rgba(0,0,0,0.2); padding: 9px 12px;
+  }
+  .dc-cell.seg-cell { background: rgba(201,168,76,0.05); color: var(--gold-light); font-weight: 600; }
+  .dc-cell.bad { color: var(--red); }
+  .dc-cell.good { color: var(--accent2); }
+
+  /* ── CHART ── */
+  .chart-wrap {
+    background: rgba(255,255,255,0.02); border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.07); padding: 20px; margin-bottom: 16px;
+  }
+  .chart-title { font-size: 12px; color: var(--text-muted); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+  .bar-chart { display: flex; align-items: flex-end; gap: 5px; height: 120px; margin-bottom: 8px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; flex: 1; }
+  .bar { width: 100%; border-radius: 3px 3px 0 0; position: relative; min-height: 6px; transition: all 0.3s; }
+  .bar.pos { background: linear-gradient(180deg, var(--accent2), rgba(52,199,123,0.5)); }
+  .bar.neg { background: linear-gradient(0deg, var(--red), rgba(232,85,85,0.5)); align-self: flex-start; border-radius: 0 0 3px 3px; }
+  .bar-year { font-size: 8.5px; color: var(--text-muted); margin-top: 4px; }
+  .bar-val { font-size: 8px; color: var(--text-muted); margin-top: 1px; }
+
+  .return-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .rs-item { background: rgba(255,255,255,0.03); border-radius: 8px; padding: 12px; border: 1px solid rgba(255,255,255,0.06); }
+  .rs-label { font-size: 10px; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.8px; }
+  .rs-value { font-size: 18px; font-weight: 700; color: var(--gold); font-family: 'Playfair Display', serif; }
+  .rs-sub { font-size: 10px; color: var(--text-muted); }
+
+  /* ── TAX SECTION ── */
+  .tax-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); align-items: flex-start; }
+  .tax-item:last-child { border-bottom: none; }
+  .tax-badge {
+    background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold); font-size: 10px; font-weight: 700; padding: 4px 8px;
+    border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+    text-align: center; min-width: 52px; letter-spacing: 0.3px;
+  }
+  .tax-content .tax-title { font-size: 13px; font-weight: 700; color: #E8E3DF; margin-bottom: 4px; }
+  .tax-content .tax-body { font-size: 12px; color: #A8A3A0; line-height: 1.65; }
+
+  /* ── FINAL CTA ── */
+  .cta-slide {
+    background: linear-gradient(160deg, #0B1022 0%, #0D1528 100%);
+    text-align: center; justify-content: center; align-items: center;
+  }
+  .cta-ring {
+    width: 100px; height: 100px; border-radius: 50%;
+    border: 2px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 28px; position: relative;
+  }
+  .cta-ring::after {
+    content: ''; position: absolute; inset: 6px; border-radius: 50%;
+    background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.15);
+  }
+  .cta-icon { font-size: 36px; position: relative; z-index: 1; }
+  .cta-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; line-height: 1.3; margin-bottom: 14px; }
+  .cta-desc { font-size: 13px; color: var(--text-muted); line-height: 1.75; max-width: 340px; margin: 0 auto 32px; }
+  .cta-disclaimer { font-size: 10px; color: #504A48; line-height: 1.6; max-width: 360px; margin: 0 auto; }
+
+  /* ── DOLLAR EXAMPLE ── */
+  .dollar-flow {
+    background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 12px; padding: 18px; margin-bottom: 14px;
+  }
+  .df-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 12.5px;
+  }
+  .df-row:last-child { border-bottom: none; }
+  .df-label { color: #B8B3AF; }
+  .df-val { font-weight: 700; }
+  .df-val.gold { color: var(--gold); }
+  .df-val.green { color: var(--accent2); }
+  .df-val.red { color: var(--red); }
+
+  /* ── NAV DOTS ── */
+  .nav-dots {
+    position: fixed; right: 14px; top: 50%; transform: translateY(-50%);
+    display: flex; flex-direction: column; gap: 8px; z-index: 100;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.15); cursor: pointer; transition: all 0.3s; }
+  .dot.active { background: var(--gold); transform: scale(1.4); }
+
+  /* ── PAGE HEADER DECO ── */
+  .page-header-deco {
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.4;
+  }
+
+  @media (max-width: 380px) {
+    .slide { padding: 40px 22px 52px; }
+    .hero-title { font-size: 30px; }
+    .slide-title { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots">
+  <div class="dot active" onclick="scrollToSlide(0)"></div>
+  <div class="dot" onclick="scrollToSlide(1)"></div>
+  <div class="dot" onclick="scrollToSlide(2)"></div>
+  <div class="dot" onclick="scrollToSlide(3)"></div>
+  <div class="dot" onclick="scrollToSlide(4)"></div>
+  <div class="dot" onclick="scrollToSlide(5)"></div>
+  <div class="dot" onclick="scrollToSlide(6)"></div>
+  <div class="dot" onclick="scrollToSlide(7)"></div>
+  <div class="dot" onclick="scrollToSlide(8)"></div>
+  <div class="dot" onclick="scrollToSlide(9)"></div>
+</nav>
+
+<!-- ══════════════════════════════ SLIDE 1 – HERO ══════════════════════════════ -->
+<section class="slide hero" id="slide0">
+  <div class="hero-badge">Complete Guide · 2026 Edition</div>
+  <h1 class="hero-title">
+    Segregated Fund
+    <span class="sub">Canada's Most Underrated Investment</span>
+  </h1>
+  <p class="hero-desc">
+    Insurance-grade protection meets investment growth.<br>
+    Discover why <strong style="color:var(--gold)">Seg Funds beat Mutual Funds &amp; ETFs</strong> for estate planning, tax efficiency, and wealth protection.
+  </p>
+  <div class="hero-stats">
+    <div class="stat-box">
+      <span class="stat-num">75–100%</span>
+      <span class="stat-label">Principal Guarantee</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">$0</span>
+      <span class="stat-label">Probate Fees</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">2 Wks</span>
+      <span class="stat-label">Death Settlement</span>
+    </div>
+  </div>
+
+  <!-- Contact Card -->
+  <div style="margin-top:32px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.28);border-radius:14px;padding:20px 18px;">
+    <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;font-weight:700;">📬 Your Advisor</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#8A6B28);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">👩</div>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.2;">Elina</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Licensed Insurance &amp; Financial Advisor</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📞</span>
+        <span style="font-size:14px;font-weight:600;color:#34C77B;letter-spacing:0.5px;">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">💬</span>
+        <span style="font-size:13px;color:#34C77B;">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">✉️</span>
+        <span style="font-size:12.5px;color:var(--gold-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 2 – What Is a Seg Fund ══════════════════════════════ -->
+<section class="slide" id="slide1">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">01 / The Basics</div>
+  <h2 class="slide-title">What Is a<br><span class="gold">Segregated Fund?</span></h2>
+  <div class="divider"></div>
+
+  <div class="info-card">
+    <span class="card-icon">🏛️</span>
+    <div class="card-title">Core Definition</div>
+    <div class="card-body">
+      A Segregated Fund is a <strong style="color:var(--gold-light)">variable annuity contract issued exclusively by life insurance companies</strong>. Your premiums are invested in a professionally managed portfolio of stocks, bonds, and other assets — but the fund is kept <strong style="color:var(--gold-light)">strictly separate</strong> from the insurer's general assets, protected under provincial Insurance Acts.
+    </div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">⚖️</span>
+    <div class="card-title">Legal Standing</div>
+    <div class="card-body">
+      Under the Canadian Income Tax Act, a Seg Fund is treated as a <strong style="color:var(--gold-light)">life insurance contract</strong> (Para 138.1) and regulated by provincial Insurance Acts — not securities law. This critical distinction unlocks a set of legal protections unavailable to any other investment vehicle.
+    </div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🛡️</span>
+    <div class="card-title">Core Guarantee Mechanism</div>
+    <div class="card-body">
+      The insurance company must guarantee the return of at least <strong style="color:var(--gold-light)">75% of premiums paid (some contracts guarantee 100%)</strong> at the contract's maturity date or upon the death of the annuitant — a protection no Mutual Fund or ETF can offer.
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="hb-title">🔑 The Simple Formula</div>
+    <div class="hb-body">Seg Fund = <strong style="color:var(--gold-light)">Mutual Fund Growth Potential</strong> + <strong style="color:var(--gold-light)">Life Insurance Legal Protection</strong> + <strong style="color:var(--gold-light)">Estate Planning Tax Advantages</strong></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 3 – Who Should Buy ══════════════════════════════ -->
+<section class="slide" id="slide2">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">02 / Who Should Invest</div>
+  <h2 class="slide-title">Who Benefits<br><span class="gold">Most from Seg Funds?</span></h2>
+  <div class="divider"></div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">👴</span>
+    <div>
+      <div class="scenario-title">Near-Retirees &amp; Retirees</div>
+      <div class="scenario-body">Worried a market crash could devastate your retirement savings? Seg Fund's principal guarantee ensures that even in a severe downturn, at least 75% of your investment is protected at maturity — a vital safety net for retirement.</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">💼</span>
+    <div>
+      <div class="scenario-title">Self-Employed &amp; Business Owners</div>
+      <div class="scenario-body">If you personally guarantee business debts, creditors may pursue your personal assets. When a <strong style="color:var(--gold-light)">preferred family member is named as beneficiary</strong>, Seg Fund investments may be shielded from seizure in the event of bankruptcy or lawsuits.</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">🏠</span>
+    <div>
+      <div class="scenario-title">Families Focused on Estate Planning</div>
+      <div class="scenario-body">Want wealth to pass quickly to your children, bypassing months of estate administration? A named beneficiary means death benefits are <strong style="color:var(--gold-light)">paid directly, outside the estate</strong>, typically within two weeks.</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">🧾</span>
+    <div>
+      <div class="scenario-title">High-Income Non-Registered Investors</div>
+      <div class="scenario-body">In non-registered accounts, Seg Funds act as a <strong style="color:var(--gold-light)">tax flow-through vehicle</strong> — capital losses can be passed directly to you to offset taxable gains, a benefit Mutual Funds simply cannot provide.</div>
+    </div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="scenario-icon">🌟</span>
+    <div>
+      <div class="scenario-title">Anyone Seeking Financial Peace of Mind</div>
+      <div class="scenario-body">Seg Funds have no age restrictions. Anyone wanting to combine <strong style="color:var(--gold-light)">investment growth with insurance-level protection</strong> stands to benefit — at any stage of life.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 4 – Three-Way Comparison ══════════════════════════════ -->
+<section class="slide" id="slide3">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">03 / Product Comparison</div>
+  <h2 class="slide-title">Seg Fund vs<br><span class="gold">Mutual Fund vs ETF</span></h2>
+  <div class="divider"></div>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="seg">SEG FUND</th>
+        <th class="mutual">MUTUAL FUND</th>
+        <th class="etf">ETF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Principal Guarantee</td>
+        <td class="seg"><span class="tick">✓</span> 75–100%</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>Named Beneficiary</td>
+        <td class="seg"><span class="tick">✓</span> Yes</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>Bypasses Probate</td>
+        <td class="seg"><span class="tick">✓</span></td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>Creditor Protection</td>
+        <td class="seg"><span class="tick">✓</span> Available</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>Capital Loss Flow-Through</td>
+        <td class="seg"><span class="tick">✓</span></td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="partial">△</span></td>
+      </tr>
+      <tr>
+        <td>Guarantee Reset Option</td>
+        <td class="seg"><span class="tick">✓</span> Lock High Points</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+      <tr>
+        <td>Regulatory Body</td>
+        <td class="seg">Insurance Act</td>
+        <td>Securities Law</td>
+        <td>Securities Law</td>
+      </tr>
+      <tr>
+        <td>Management Fee (MER)</td>
+        <td class="seg">Higher</td>
+        <td>Medium</td>
+        <td>Lowest</td>
+      </tr>
+      <tr>
+        <td>Professional Management</td>
+        <td class="seg"><span class="tick">✓</span></td>
+        <td><span class="tick">✓</span></td>
+        <td><span class="partial">△</span></td>
+      </tr>
+      <tr>
+        <td>Insurer Insolvency Protection</td>
+        <td class="seg"><span class="tick">✓</span> ASSURIS</td>
+        <td><span class="cross">✗</span></td>
+        <td><span class="cross">✗</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <div class="hb-title">📌 Key Takeaway</div>
+    <div class="hb-body">ETFs have the lowest fees but <strong style="color:var(--gold-light)">zero protection</strong>. Mutual Funds offer mid-range fees but <strong style="color:var(--gold-light)">no estate or creditor protections</strong>. Seg Funds carry higher management fees, but provide <strong style="color:var(--gold-light)">insurance-grade protections</strong> that no other investment product can replicate.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 5 – Pros & Cons ══════════════════════════════ -->
+<section class="slide" id="slide4">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">04 / In-Depth Analysis</div>
+  <h2 class="slide-title">Seg Fund<br><span class="gold">Pros &amp; Cons</span></h2>
+  <div class="divider"></div>
+
+  <div class="pro-con">
+    <div class="pro-box">
+      <div class="box-title">✅ Key Advantages</div>
+      <ul>
+        <li>75–100% principal guarantee</li>
+        <li>Named beneficiary bypasses estate</li>
+        <li>Creditor protection mechanism</li>
+        <li>Capital losses flow to investor</li>
+        <li>Lock in market highs via reset</li>
+        <li>ASSURIS protection if insurer fails</li>
+        <li>Fast estate settlement (~2 weeks)</li>
+        <li>Save on probate &amp; legal fees</li>
+      </ul>
+    </div>
+    <div class="con-box">
+      <div class="box-title">⚠️ Considerations</div>
+      <ul>
+        <li>Higher MER than ETFs</li>
+        <li>Some products have DSC fees</li>
+        <li>More complex products</li>
+        <li>Guarantee terms vary by contract</li>
+        <li>Short-term trading fees apply</li>
+        <li>Not every investor needs all features</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <div class="hb-title">💡 The Real Cost Truth</div>
+    <div class="hb-body">
+      Based on iA Financial Group's real-world case study:<br>
+      <strong style="color:var(--gold-light)">After 25 years, the Seg Fund net value ($209,000) exceeded the Mutual Fund net value ($200,440) by $8,560</strong> — even with a higher MER — because the Seg Fund saved approximately $13,360 in probate taxes, professional fees, and executor costs.
+    </div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🔄</span>
+    <div class="card-title">The Power of the Guarantee Reset</div>
+    <div class="card-body">When markets rise, you can <strong style="color:var(--gold-light)">reset your guarantee base to the new higher market value</strong>, locking in your gains. For example: invest $100,000, which grows to $150,000 — reset the guarantee. Even if it later drops to $80,000, your maturity guarantee remains $150,000 × 75% = <strong style="color:var(--gold-light)">$112,500</strong>.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 6 – Estate Advantages at Death ══════════════════════════════ -->
+<section class="slide" id="slide5">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">05 / Estate Transfer</div>
+  <h2 class="slide-title">After Death —<br><span class="gold">The Critical Advantages</span></h2>
+  <div class="divider"></div>
+
+  <div class="death-flow">
+    <div class="flow-item">
+      <div class="flow-circle gold">⚡</div>
+      <div>
+        <div class="flow-title">Bypasses Probate Entirely</div>
+        <div class="flow-body">Seg Fund proceeds are not part of the estate — they are <strong style="color:var(--gold-light)">paid directly to the named beneficiary</strong>. Ontario's estate administration tax runs approximately 1.5%, which on large estates can mean tens of thousands saved.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle green">🚀</div>
+      <div>
+        <div class="flow-title">Lightning-Fast Settlement: ~2 Weeks</div>
+        <div class="flow-body">Standard estate administration can take <strong style="color:var(--gold-light)">months or even years</strong>. Seg Fund beneficiaries typically receive funds <strong style="color:var(--gold-light)">within two weeks</strong> — money that can immediately cover funeral costs, taxes, and other urgent obligations.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle blue">🔒</div>
+      <div>
+        <div class="flow-title">Death Benefit: Minimum 75% of Premiums</div>
+        <div class="flow-body">Even if the policyholder passes during a market downturn, beneficiaries still receive <strong style="color:var(--gold-light)">at least 75% of premiums paid</strong> (some contracts guarantee 100%) — not the depressed market value. This protection is absent in Mutual Funds and ETFs.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-circle gold">🛡️</div>
+      <div>
+        <div class="flow-title">Complete Privacy — No Public Disclosure</div>
+        <div class="flow-body">Probate is a public process — anyone can look up estate details. Seg Fund beneficiary payouts are <strong style="color:var(--gold-light)">completely private</strong>, protecting your family's financial affairs from public scrutiny.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Death cost comparison table -->
+  <div class="death-compare">
+    <div class="dc-row">
+      <div class="dc-cell header">Post-Death Fee Comparison</div>
+      <div class="dc-cell header" style="color:var(--gold);background:rgba(201,168,76,0.08)">SEG FUND</div>
+      <div class="dc-cell header">MUTUAL FUND</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell">Probate Tax (~1.5%)</div>
+      <div class="dc-cell seg-cell good">$0</div>
+      <div class="dc-cell bad">~$2,460</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell">Legal / Accounting Fees (~5%)</div>
+      <div class="dc-cell seg-cell good">$0</div>
+      <div class="dc-cell bad">~$4,500</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell">Estate Executor Fees (~5%)</div>
+      <div class="dc-cell seg-cell good">$0</div>
+      <div class="dc-cell bad">~$6,400</div>
+    </div>
+    <div class="dc-row">
+      <div class="dc-cell" style="font-weight:700">Total Savings</div>
+      <div class="dc-cell seg-cell" style="font-size:14px;font-weight:800">Save $13,360</div>
+      <div class="dc-cell bad" style="font-size:13px;font-weight:700">−$13,360</div>
+    </div>
+  </div>
+  <p style="font-size:10px;color:var(--text-muted);margin-top:-8px">*Based on iA Financial Group real case study. Ontario estate administration tax rates as of Jan 1, 2020. External executor assumed.</p>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 7 – Tax Advantages ══════════════════════════════ -->
+<section class="slide" id="slide6">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">06 / Tax Advantages</div>
+  <h2 class="slide-title">Tax Benefits<br><span class="gold">You Can't Ignore</span></h2>
+  <div class="divider"></div>
+
+  <div class="tax-item">
+    <div class="tax-badge">LOSS<br>FLOW-THROUGH</div>
+    <div class="tax-content">
+      <div class="tax-title">Capital Losses Flow Directly to Investors</div>
+      <div class="tax-body">A Seg Fund's capital losses can be allocated to investors at year-end, allowing you to <strong style="color:var(--gold-light)">offset capital gains and reduce your tax bill</strong>. Mutual Fund losses stay trapped inside the fund and are never passed on to unitholders.</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">TAX<br>FLOW-THROUGH</div>
+    <div class="tax-content">
+      <div class="tax-title">Income Character Is Preserved</div>
+      <div class="tax-body">Seg Funds act as a "tax conduit" — dividends, interest, and capital gains retain their <strong style="color:var(--gold-light)">original tax character</strong> when passed to investors via a T3 slip. Capital gains benefit from the 50% inclusion rate advantage.</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">PURCHASE<br>TIMING</div>
+    <div class="tax-content">
+      <div class="tax-title">No "Phantom Tax" on Late-Year Purchases</div>
+      <div class="tax-body">Some Seg Funds prorate income allocation based on <strong style="color:var(--gold-light)">how long you held the units</strong>. With Mutual Funds, buying at year-end can trigger tax on a full year's income you never benefited from — a trap Seg Funds can avoid.</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">DEATH<br>BENEFIT</div>
+    <div class="tax-content">
+      <div class="tax-title">Death Benefits Received Tax-Efficiently</div>
+      <div class="tax-body">Insurance proceeds paid to beneficiaries flow <strong style="color:var(--gold-light)">outside the estate</strong>, ensuring the full amount reaches the beneficiary without being reduced by income tax on the estate itself.</div>
+    </div>
+  </div>
+
+  <div class="tax-item">
+    <div class="tax-badge">RRSP /<br>TFSA</div>
+    <div class="tax-content">
+      <div class="tax-title">Fully Compatible with Registered Accounts</div>
+      <div class="tax-body">Seg Funds work seamlessly inside RRSP, RRIF, and TFSA accounts, stacking <strong style="color:var(--gold-light)">registered account tax deferral or tax-free growth</strong> on top of the insurance protections — dual-layer tax optimization.</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:16px">
+    <div class="hb-title">⚠️ Key Tax Difference vs. Mutual Funds</div>
+    <div class="hb-body">Mutual Fund <strong style="color:var(--gold-light)">capital losses never reach investors</strong> — they remain inside the fund to offset future gains. Seg Fund loss flow-through is a meaningful tax buffer for non-registered investors during down markets.</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 8 – Investment Return Example ══════════════════════════════ -->
+<section class="slide" id="slide7">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">07 / Return Case Study</div>
+  <h2 class="slide-title">Advanced Allocation<br><span class="gold">10-Year Performance</span></h2>
+  <div class="divider"></div>
+
+  <p class="body">Using the <strong>Canada Life Generations™ Advanced Allocation</strong> fund as a real example — asset allocation of 80% equities and 20% fixed income, data as of December 31, 2025.</p>
+
+  <!-- Bar chart -->
+  <div class="chart-wrap">
+    <div class="chart-title">Annual Returns (%) — Generations Guarantee Level</div>
+    <div class="bar-chart" id="barChart"></div>
+    <div id="yearLabels" style="display:flex;gap:5px"></div>
+  </div>
+
+  <div class="return-stats">
+    <div class="rs-item">
+      <div class="rs-label">10-Year Avg Annual Return</div>
+      <div class="rs-value">5.54%</div>
+      <div class="rs-sub">Generations level</div>
+    </div>
+    <div class="rs-item">
+      <div class="rs-label">$1,000 → After 10 Years</div>
+      <div class="rs-value">$1,714</div>
+      <div class="rs-sub">+71.4% net growth</div>
+    </div>
+    <div class="rs-item">
+      <div class="rs-label">Positive Return Years</div>
+      <div class="rs-value">8 / 10</div>
+      <div class="rs-sub">Strong consistency</div>
+    </div>
+    <div class="rs-item">
+      <div class="rs-label">Total Fund Assets</div>
+      <div class="rs-value">$419M</div>
+      <div class="rs-sub">AUM</div>
+    </div>
+  </div>
+
+  <!-- Investment dollar example -->
+  <div class="dollar-flow">
+    <div style="font-size:12px;color:var(--gold);font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px">📊 Investment Growth Example</div>
+    <div class="df-row">
+      <span class="df-label">Initial Investment (Dec 31, 2015)</span>
+      <span class="df-val gold">$100,000</span>
+    </div>
+    <div class="df-row">
+      <span class="df-label">Value After 10 Years (Dec 31, 2025)</span>
+      <span class="df-val green">$171,454</span>
+    </div>
+    <div class="df-row">
+      <span class="df-label">Principal Guarantee (75%)</span>
+      <span class="df-val gold">$75,000</span>
+    </div>
+    <div class="df-row">
+      <span class="df-label">Net Gain (protected even in downturns)</span>
+      <span class="df-val green">+$71,454</span>
+    </div>
+  </div>
+
+  <p style="font-size:10px;color:var(--text-muted);line-height:1.6">*Past performance does not guarantee future results. Returns shown are after the Fund Expense Ratio (FER) has been deducted. Source: Canada Life Generations™ Fund Facts, December 31, 2025.</p>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 9 – Five-Layer Protection ══════════════════════════════ -->
+<section class="slide" id="slide8">
+  <div class="page-header-deco"></div>
+  <div class="slide-num">08 / Multi-Layer Protection</div>
+  <h2 class="slide-title">Seg Fund's<br><span class="gold">Five-Layer Protection System</span></h2>
+  <div class="divider"></div>
+
+  <div class="info-card">
+    <span class="card-icon">🔵</span>
+    <div class="card-title">Layer 1: Maturity Principal Guarantee</div>
+    <div class="card-body">At the contract's maturity date (typically after 10 years), the insurer guarantees the return of at least <strong style="color:var(--gold-light)">75% of premiums paid (up to 100% in some products)</strong>. Even if the fund's market value falls to zero, you receive the guaranteed amount.</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🟡</span>
+    <div class="card-title">Layer 2: Death Benefit Guarantee</div>
+    <div class="card-body">Upon the policyholder's death, beneficiaries receive the <strong style="color:var(--gold-light)">greater of the current market value or the guaranteed amount (75–100% of premiums)</strong>, protecting heirs from the misfortune of poor market timing at death.</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🟢</span>
+    <div class="card-title">Layer 3: Guarantee Reset Option</div>
+    <div class="card-body">When the fund's net asset value rises, investors may <strong style="color:var(--gold-light)">voluntarily reset the guarantee base to the new, higher market value</strong> — locking in investment gains as the new guarantee floor so protections grow with your wealth.</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🔴</span>
+    <div class="card-title">Layer 4: Creditor Protection</div>
+    <div class="card-body">When a <strong style="color:var(--gold-light)">preferred family member (spouse, child, parent) is named as beneficiary</strong>, Seg Fund assets may be exempt from creditor seizure in bankruptcy or civil lawsuits — an essential safeguard for business owners and self-employed individuals.</div>
+  </div>
+
+  <div class="info-card">
+    <span class="card-icon">🟣</span>
+    <div class="card-title">Layer 5: ASSURIS Regulatory Protection</div>
+    <div class="card-body">Even if the issuing life insurance company becomes insolvent, <strong style="color:var(--gold-light)">ASSURIS</strong> — Canada's independent life insurance protection organization — guarantees policyholders will receive at least <strong style="color:var(--gold-light)">85% of their policy benefits</strong> (minimum $60,000).</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ SLIDE 10 – Final CTA ══════════════════════════════ -->
+<section class="slide cta-slide" id="slide9">
+  <div class="cta-ring">
+    <span class="cta-icon">💎</span>
+  </div>
+  <h2 class="cta-title">Time to Rethink<br><span class="gold">Seg Funds</span></h2>
+  <p class="cta-desc">
+    In Canada, Seg Funds are the only investment vehicle that combines <strong style="color:var(--gold-light)">growth potential, principal protection, estate transfer efficiency, tax optimization, and creditor protection</strong> — all in one contract.
+  </p>
+
+  <div style="width:100%;max-width:340px;margin-bottom:28px">
+    <div class="highlight-box" style="text-align:left">
+      <div class="hb-title">✅ Core Value Summary</div>
+      <div class="hb-body" style="font-size:12px">
+        <strong style="color:var(--gold-light)">Investment Growth:</strong> Professional management, diversified assets<br>
+        <strong style="color:var(--gold-light)">Principal Protection:</strong> Up to 100% maturity &amp; death guarantee<br>
+        <strong style="color:var(--gold-light)">Estate Transfer:</strong> Bypass probate, settle in ~2 weeks<br>
+        <strong style="color:var(--gold-light)">Tax Optimization:</strong> Loss flow-through, income character retained<br>
+        <strong style="color:var(--gold-light)">Creditor Protection:</strong> Shield family wealth from lawsuits &amp; bankruptcy
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Contact Block -->
+  <div style="width:100%;max-width:340px;margin-bottom:24px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.28);border-radius:14px;padding:20px 18px;">
+    <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:14px;font-weight:700;text-align:left;">🌟 Get In Touch Today</div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+      <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#C9A84C,#8A6B28);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;">
+        <div style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#fff;">Elina</div>
+        <div style="font-size:11px;color:var(--text-muted);">Licensed Insurance &amp; Financial Advisor</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:30px;height:30px;border-radius:7px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">📞</span>
+        <span style="font-size:14px;font-weight:600;color:#34C77B;">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:30px;height:30px;border-radius:7px;background:rgba(52,199,123,0.12);border:1px solid rgba(52,199,123,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">💬</span>
+        <span style="font-size:13px;color:#34C77B;">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:30px;height:30px;border-radius:7px;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">✉️</span>
+        <span style="font-size:12px;color:var(--gold-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="cta-disclaimer">
+    This presentation is for general educational purposes only and does not constitute personal investment, tax, or legal advice. Please consult a licensed financial advisor and tax professional before making any investment decisions. Past investment performance does not guarantee future results. Fund investments carry risk; values may decrease.<br><br>
+    Sources: Canada Life Generations™ Fund Facts (December 31, 2025), iA Financial Group (F13-1133A), Empire Life STEPUP (Vol.18 No.05).
+  </p>
+</section>
+
+<script>
+// Bar chart — Advanced Allocation annual returns
+const barData = [
+  { year: '2016', val: 6.14 },
+  { year: '2017', val: 6.18 },
+  { year: '2018', val: -5.59 },
+  { year: '2019', val: 10.41 },
+  { year: '2020', val: 7.20 },
+  { year: '2021', val: 11.76 },
+  { year: '2022', val: -9.89 },
+  { year: '2023', val: 8.44 },
+  { year: '2024', val: 13.63 },
+  { year: '2025', val: 9.69 },
+];
+
+const maxAbs = Math.max(...barData.map(d => Math.abs(d.val)));
+const chartH = 120;
+const chartEl = document.getElementById('barChart');
+const labelEl = document.getElementById('yearLabels');
+
+barData.forEach(d => {
+  const colDiv = document.createElement('div');
+  colDiv.className = 'bar-col';
+
+  const barH = Math.round((Math.abs(d.val) / maxAbs) * (chartH * 0.85));
+  const bar = document.createElement('div');
+  bar.className = 'bar ' + (d.val >= 0 ? 'pos' : 'neg');
+  bar.style.height = barH + 'px';
+  colDiv.appendChild(bar);
+
+  const valLabel = document.createElement('div');
+  valLabel.className = 'bar-val';
+  valLabel.textContent = (d.val > 0 ? '+' : '') + d.val + '%';
+  colDiv.appendChild(valLabel);
+
+  chartEl.appendChild(colDiv);
+
+  const yl = document.createElement('div');
+  yl.style.cssText = 'flex:1;text-align:center;font-size:8px;color:var(--text-muted)';
+  yl.textContent = d.year.slice(2);
+  labelEl.appendChild(yl);
+});
+
+// Navigation dots
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function scrollToSlide(i) {
+  slides[i].scrollIntoView({ behavior: 'smooth' });
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const idx = Array.from(slides).indexOf(entry.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[idx]) dots[idx].classList.add('active');
+    }
+  });
+}, { threshold: 0.5 });
+
+slides.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
