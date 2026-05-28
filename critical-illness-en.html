@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:title" content="Critical Illness Insurance — You Still Need It in Canada 2026">
+<meta property="og:description" content="2 in 5 Canadians will develop cancer. Free healthcare doesn't cover everything — Critical Illness Insurance fills the gap.">
+<title>Critical Illness Insurance | 2026 Complete Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #C0392B;
+  --crimson2: #E74C3C;
+  --crimson-light: #F1948A;
+  --bg: #0F0A0A;
+  --bg2: #1A0D0D;
+  --amber: #E8A020;
+  --amber-light: #F5C842;
+  --green: #27AE60;
+  --green-light: #2ECC71;
+  --blue: #2980B9;
+  --blue-light: #5DADE2;
+  --text: #F5EFEF;
+  --text-muted: #9A8A8A;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.07);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.slide {
+  min-height:100vh; width:100%; max-width:480px; margin:0 auto;
+  padding:52px 26px 64px; position:relative; display:flex;
+  flex-direction:column; border-bottom:1px solid rgba(192,57,43,0.2); overflow:hidden;
+}
+.slide::before {
+  content:''; position:absolute; width:260px; height:260px; border-radius:50%;
+  background:radial-gradient(circle,rgba(192,57,43,0.12) 0%,transparent 70%);
+  top:-50px; right:-50px; pointer-events:none;
+}
+.page-line {
+  position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,transparent,var(--crimson),transparent); opacity:0.6;
+}
+.hero {
+  background:linear-gradient(160deg,#0F0A0A 0%,#1C0808 50%,#0A0808 100%);
+  padding-top:68px;
+}
+.hero::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:200px;
+  background:linear-gradient(transparent,rgba(192,57,43,0.07)); pointer-events:none;
+}
+.hero-eyebrow {
+  display:inline-block; background:rgba(192,57,43,0.15);
+  border:1px solid rgba(192,57,43,0.4); color:var(--crimson-light);
+  font-size:10px; letter-spacing:3px; padding:5px 14px; border-radius:2px;
+  margin-bottom:24px; text-transform:uppercase;
+}
+.hero-title {
+  font-family:'Libre Baskerville',serif; font-size:32px; font-weight:700;
+  line-height:1.25; margin-bottom:10px; color:#fff;
+}
+.hero-title .accent { color:var(--crimson-light); }
+.hero-sub { font-size:13px; color:var(--text-muted); line-height:1.75; margin-bottom:36px; max-width:360px; }
+.hero-sub strong { color:var(--amber-light); }
+.warning-banner {
+  background:rgba(192,57,43,0.15); border:1px solid rgba(192,57,43,0.4);
+  border-left:4px solid var(--crimson2); border-radius:8px; padding:14px 16px; margin-bottom:28px;
+}
+.wb-title { font-size:12.5px; font-weight:700; color:var(--crimson-light); margin-bottom:6px; }
+.wb-body { font-size:11.5px; color:#C8B0B0; line-height:1.65; }
+.wb-body strong { color:var(--amber-light); }
+.stat-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:28px; }
+.stat-box { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:13px 10px; text-align:center; }
+.stat-n { font-family:'Libre Baskerville',serif; font-size:16px; font-weight:700; color:var(--crimson-light); display:block; margin-bottom:4px; }
+.stat-l { font-size:9px; color:var(--text-muted); line-height:1.35; }
+.contact-card { background:rgba(192,57,43,0.09); border:1px solid rgba(192,57,43,0.28); border-radius:14px; padding:17px; }
+.contact-label { font-size:9.5px; letter-spacing:2.5px; color:var(--crimson-light); text-transform:uppercase; font-weight:700; margin-bottom:12px; }
+.contact-person { display:flex; align-items:center; gap:12px; margin-bottom:13px; }
+.contact-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#C0392B,#7B241C); display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; }
+.contact-name { font-family:'Libre Baskerville',serif; font-size:18px; font-weight:700; color:#fff; }
+.contact-role { font-size:10.5px; color:var(--text-muted); margin-top:2px; }
+.contact-links { display:flex; flex-direction:column; gap:8px; }
+.contact-link { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.clink-icon { width:29px; height:29px; border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:12px; flex-shrink:0; }
+.clink-g { background:rgba(39,174,96,0.12); border:1px solid rgba(39,174,96,0.25); }
+.clink-r { background:rgba(192,57,43,0.15); border:1px solid rgba(192,57,43,0.3); }
+.ctext-g { font-size:13px; font-weight:600; color:var(--green-light); }
+.ctext-r { font-size:11.5px; color:var(--crimson-light); word-break:break-all; }
+.slide-num { font-size:10px; letter-spacing:3px; color:var(--crimson-light); text-transform:uppercase; margin-bottom:26px; font-weight:500; opacity:0.85; }
+.slide-title { font-family:'Libre Baskerville',serif; font-size:24px; font-weight:700; line-height:1.35; margin-bottom:6px; color:#fff; }
+.slide-title .t { color:var(--crimson-light); }
+.divider { width:44px; height:3px; background:linear-gradient(90deg,var(--crimson),transparent); margin-bottom:24px; border-radius:2px; }
+p.bd { font-size:13px; line-height:1.82; color:#CCC0C0; margin-bottom:14px; }
+p.bd strong { color:var(--amber-light); font-weight:500; }
+.card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:15px 17px; margin-bottom:11px; }
+.card-icon { font-size:19px; margin-bottom:7px; display:block; }
+.card-title { font-size:12.5px; font-weight:700; color:var(--crimson-light); margin-bottom:5px; }
+.card-body { font-size:12px; color:#BEB0B0; line-height:1.72; }
+.card-body strong { color:var(--amber-light); font-weight:500; }
+.hbox { background:linear-gradient(135deg,rgba(192,57,43,0.13),rgba(192,57,43,0.04)); border:1px solid rgba(192,57,43,0.28); border-left:3px solid var(--crimson); border-radius:8px; padding:13px 15px; margin-bottom:13px; }
+.hbox-title { font-size:11px; text-transform:uppercase; letter-spacing:1.5px; color:var(--crimson-light); margin-bottom:6px; font-weight:700; }
+.hbox-body { font-size:12.5px; line-height:1.75; color:#D0C4C4; }
+.hbox-body strong { color:var(--amber-light); }
+.alarm-box { background:rgba(192,57,43,0.13); border:1.5px solid rgba(192,57,43,0.45); border-radius:10px; padding:14px 16px; margin-bottom:13px; }
+.alarm-title { font-size:13px; font-weight:700; color:var(--crimson-light); margin-bottom:6px; }
+.alarm-body { font-size:12px; color:#C8B0B0; line-height:1.7; }
+.alarm-body strong { color:#F5C842; }
+.not-covered { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:16px; }
+.nc-item { background:rgba(192,57,43,0.08); border:1px solid rgba(192,57,43,0.22); border-radius:10px; padding:12px; text-align:center; }
+.nc-icon { font-size:20px; margin-bottom:6px; }
+.nc-title { font-size:11px; font-weight:700; color:var(--crimson-light); margin-bottom:3px; }
+.nc-body { font-size:10.5px; color:#A89090; line-height:1.5; }
+.stat-bar { background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid rgba(255,255,255,0.06); padding:14px; margin-bottom:10px; }
+.sb-label { font-size:11.5px; color:#BEB0B0; margin-bottom:6px; }
+.sb-track { height:18px; background:rgba(255,255,255,0.06); border-radius:4px; overflow:hidden; }
+.sb-fill { height:100%; border-radius:4px; }
+.sb-fill.crimson { background:linear-gradient(90deg,var(--crimson2),rgba(192,57,43,0.4)); }
+.sb-fill.amber { background:linear-gradient(90deg,var(--amber),rgba(232,160,32,0.4)); }
+.sb-val { font-size:11px; font-weight:700; margin-top:4px; text-align:right; }
+.cover-table { width:100%; border-collapse:separate; border-spacing:0; margin-bottom:14px; font-size:11.5px; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); }
+.cover-table th { padding:9px 10px; font-size:10px; font-weight:700; letter-spacing:0.5px; text-align:center; background:rgba(0,0,0,0.25); }
+.cover-table th:first-child { text-align:left; color:var(--text-muted); }
+.cover-table th.th-yes { color:var(--green-light); }
+.cover-table th.th-ci { color:var(--crimson-light); }
+.cover-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,0.05); text-align:center; color:#BEB0B0; vertical-align:middle; }
+.cover-table td:first-child { text-align:left; font-size:11px; color:#D0C4C4; }
+.cover-table tr:last-child td { border-bottom:none; }
+.yes { color:var(--green-light); font-size:14px; }
+.no { color:var(--crimson2); font-size:14px; }
+.part { color:var(--amber); font-size:13px; }
+.illness-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:16px; }
+.ill-item { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:13px; text-align:center; }
+.ill-icon { font-size:22px; margin-bottom:6px; }
+.ill-name { font-size:12px; font-weight:700; color:#E8D8D8; margin-bottom:3px; }
+.ill-stat { font-size:10.5px; color:var(--crimson-light); font-weight:600; }
+.payout-flow { display:flex; flex-direction:column; gap:0; margin-bottom:16px; }
+.pf-item { display:flex; align-items:flex-start; gap:13px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.pf-item:last-child { border-bottom:none; }
+.pf-dot { width:33px; height:33px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:13px; flex-shrink:0; margin-top:2px; }
+.pd-r { background:rgba(192,57,43,0.18); border:1.5px solid var(--crimson); }
+.pd-a { background:rgba(232,160,32,0.15); border:1.5px solid var(--amber); }
+.pd-g { background:rgba(39,174,96,0.12); border:1.5px solid var(--green); }
+.pd-b { background:rgba(41,128,185,0.12); border:1.5px solid var(--blue); }
+.pf-title { font-size:12.5px; font-weight:700; color:#E8D8D8; margin-bottom:3px; }
+.pf-body { font-size:11.5px; color:#9A8A8A; line-height:1.65; }
+.pf-body strong { color:var(--amber-light); }
+.ci-di-table { width:100%; border-collapse:separate; border-spacing:0; margin-bottom:14px; font-size:11px; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); }
+.ci-di-table th { padding:9px 10px; font-size:10px; font-weight:700; letter-spacing:0.5px; text-align:center; background:rgba(0,0,0,0.25); }
+.ci-di-table th:first-child { text-align:left; color:var(--text-muted); }
+.ci-di-table th.th-ci { color:var(--crimson-light); background:rgba(192,57,43,0.08); }
+.ci-di-table th.th-di { color:var(--blue-light); }
+.ci-di-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,0.05); text-align:center; color:#BEB0B0; vertical-align:middle; }
+.ci-di-table td:first-child { text-align:left; font-size:11px; color:#D0C4C4; font-weight:500; }
+.ci-di-table td.ci-v { background:rgba(192,57,43,0.05); color:var(--crimson-light); font-weight:600; }
+.ci-di-table td.di-v { color:var(--blue-light); }
+.ci-di-table tr:last-child td { border-bottom:none; }
+.procon { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px; }
+.pro-box { background:rgba(39,174,96,0.07); border:1px solid rgba(39,174,96,0.2); border-radius:10px; padding:13px; }
+.con-box { background:rgba(192,57,43,0.07); border:1px solid rgba(192,57,43,0.2); border-radius:10px; padding:13px; }
+.pro-box .bt { color:var(--green-light); font-size:11px; font-weight:700; margin-bottom:8px; }
+.con-box .bt { color:var(--crimson-light); font-size:11px; font-weight:700; margin-bottom:8px; }
+.pro-box li, .con-box li { font-size:10.5px; line-height:1.65; color:#BEB0B0; list-style:none; padding-left:13px; position:relative; margin-bottom:5px; }
+.pro-box li::before { content:'✓'; position:absolute; left:0; color:var(--green); font-weight:700; }
+.con-box li::before { content:'×'; position:absolute; left:0; color:var(--crimson2); font-weight:700; }
+.ex-box { background:rgba(192,57,43,0.07); border:1px solid rgba(192,57,43,0.22); border-radius:12px; padding:15px; margin-bottom:13px; }
+.ex-title { font-size:10.5px; font-weight:700; color:var(--crimson-light); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px; }
+.ex-row { display:flex; justify-content:space-between; align-items:center; padding:5px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:12px; }
+.ex-row:last-child { border-bottom:none; }
+.ex-l { color:#A89090; }
+.ex-v { font-weight:700; }
+.ev-g { color:var(--green-light); }
+.ev-r { color:var(--crimson-light); }
+.ev-a { color:var(--amber-light); }
+.cta-slide { background:linear-gradient(155deg,#100808 0%,#1A0C0C 100%); justify-content:center; align-items:center; text-align:center; }
+.cta-ring { width:90px; height:90px; border-radius:50%; border:2px solid rgba(192,57,43,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; position:relative; }
+.cta-ring::after { content:''; position:absolute; inset:6px; border-radius:50%; background:rgba(192,57,43,0.1); border:1px solid rgba(192,57,43,0.2); }
+.cta-icon { font-size:32px; position:relative; z-index:1; }
+.cta-title { font-family:'Libre Baskerville',serif; font-size:26px; font-weight:700; line-height:1.3; margin-bottom:12px; }
+.cta-desc { font-size:12.5px; color:var(--text-muted); line-height:1.75; max-width:320px; margin:0 auto 26px; }
+.cta-disc { font-size:9px; color:#3E3030; line-height:1.6; max-width:340px; margin:0 auto; }
+.nav-dots { position:fixed; right:12px; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; gap:7px; z-index:100; }
+.dot { width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,0.15); cursor:pointer; transition:all 0.3s; }
+.dot.active { background:var(--crimson-light); transform:scale(1.5); }
+@media (max-width:380px) { .slide { padding:40px 20px 52px; } .hero-title { font-size:26px; } .slide-title { font-size:20px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+</nav>
+
+<!-- ══ SLIDE 1 — HERO ══ -->
+<section class="slide hero" id="s0">
+  <div class="hero-eyebrow">Complete Guide · 2026 Edition</div>
+  <h1 class="hero-title">Critical Illness<br>Insurance<br><span class="accent" style="font-size:0.72em;">Canada Has Free Healthcare.<br>You Still Need This.</span></h1>
+  <p class="hero-sub">
+    "I have provincial health coverage — why would I need more?"<br>
+    <strong>Because free healthcare only covers your treatment. It doesn't cover your income, your mortgage, your medications, or your family's daily life.</strong>
+  </p>
+
+  <div class="warning-banner">
+    <div class="wb-title">⚠️ Did You Know?</div>
+    <div class="wb-body">Cancer patients in Canada spend an average of <strong>$290/month out-of-pocket</strong> on costs NOT covered by provincial health plans. <strong>90%</strong> of Canadians say a sudden cancer diagnosis would significantly impact their household finances.</div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <span class="stat-n">2 in 5</span>
+      <span class="stat-l">Canadians will develop cancer in their lifetime</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-n">$6,000</span>
+      <span class="stat-l">avg. monthly cost of take-home cancer drugs</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-n">Tax-Free</span>
+      <span class="stat-l">lump-sum payout, use it however you want</span>
+    </div>
+  </div>
+
+  <!-- pulse SVG -->
+  <div style="text-align:center;margin-bottom:22px;opacity:0.15;">
+    <svg width="140" height="60" viewBox="0 0 140 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="0,30 20,30 30,10 40,50 50,20 60,40 70,15 80,45 90,30 110,30 120,20 130,30 140,30" stroke="#C0392B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-label">📬 Your Advisor</div>
+    <div class="contact-person">
+      <div class="contact-avatar">👩</div>
+      <div>
+        <div class="contact-name">Elina</div>
+        <div class="contact-role">Licensed Insurance &amp; Financial Advisor</div>
+      </div>
+    </div>
+    <div class="contact-links">
+      <a href="tel:4168267591" class="contact-link"><span class="clink-icon clink-g">📞</span><span class="ctext-g">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="contact-link"><span class="clink-icon clink-g">💬</span><span class="ctext-g">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="contact-link"><span class="clink-icon clink-r">✉️</span><span class="ctext-r">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 2 — The Healthcare Gap ══ -->
+<section class="slide" id="s1">
+  <div class="page-line"></div>
+  <div class="slide-num">01 / The Healthcare Gap</div>
+  <h2 class="slide-title">Free Healthcare<br><span class="t">Doesn't Cover Everything</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">Provincial healthcare (OHIP, MSP, etc.) covers <strong>hospital-based surgery, chemotherapy, and radiation</strong>. But once a serious illness strikes, <strong>a long list of real costs falls entirely on you:</strong></p>
+
+  <div class="not-covered">
+    <div class="nc-item">
+      <div class="nc-icon">💊</div>
+      <div class="nc-title">Take-Home Cancer Drugs</div>
+      <div class="nc-body">Not covered by most provinces. Average cost: <strong style="color:var(--crimson-light)">$6,000/month</strong></div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">🏠</div>
+      <div class="nc-title">Home Care &amp; Nursing</div>
+      <div class="nc-body">Private nurse or caregiver costs are fully out-of-pocket</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">✈️</div>
+      <div class="nc-title">Travel for Treatment</div>
+      <div class="nc-body">Travel &amp; accommodation to specialist centres</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">💼</div>
+      <div class="nc-title">Lost Income</div>
+      <div class="nc-body">Income gap during treatment and recovery time off work</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">👶</div>
+      <div class="nc-title">Childcare Costs</div>
+      <div class="nc-body">Daycare &amp; childcare during treatment and recovery</div>
+    </div>
+    <div class="nc-item">
+      <div class="nc-icon">🧪</div>
+      <div class="nc-title">Alternative Therapies</div>
+      <div class="nc-body">Physiotherapy, nutritional support, alternative treatments</div>
+    </div>
+  </div>
+
+  <div class="alarm-box">
+    <div class="alarm-title">🔴 The Data Is Clear</div>
+    <div class="alarm-body">The Canadian Cancer Society reports cancer patients spend an average of <strong>$290/month out-of-pocket</strong>. Canada is the <strong>only developed nation with universal healthcare but no universal prescription drug coverage</strong>.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 3 — The Real Risk ══ -->
+<section class="slide" id="s2">
+  <div class="page-line"></div>
+  <div class="slide-num">02 / The Real Risk</div>
+  <h2 class="slide-title">This Isn't<br><span class="t">"Something That Happens to Others"</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">Many Canadians think serious illness is a distant risk. <strong>The numbers tell a very different story:</strong></p>
+
+  <div style="margin-bottom:18px;">
+    <div class="stat-bar">
+      <div class="sb-label">🎗️ Lifetime cancer risk for Canadians</div>
+      <div class="sb-track"><div class="sb-fill crimson" style="width:44%"></div></div>
+      <div class="sb-val" style="color:var(--crimson-light)">44% of men · 43% of women</div>
+    </div>
+    <div class="stat-bar">
+      <div class="sb-label">❤️ Heart disease — Canada's #2 cause of death</div>
+      <div class="sb-track"><div class="sb-fill amber" style="width:28%"></div></div>
+      <div class="sb-val" style="color:var(--amber-light)">~50,000 Canadians die from heart disease annually</div>
+    </div>
+    <div class="stat-bar">
+      <div class="sb-label">🧠 Strokes affect Canadians every year</div>
+      <div class="sb-track"><div class="sb-fill amber" style="width:22%"></div></div>
+      <div class="sb-val" style="color:var(--amber-light)">~62,000 strokes per year in Canada</div>
+    </div>
+    <div class="stat-bar">
+      <div class="sb-label">📋 Top 3 CI insurance claim causes</div>
+      <div class="sb-track"><div class="sb-fill crimson" style="width:75%"></div></div>
+      <div class="sb-val" style="color:var(--crimson-light)">Cancer, heart attack &amp; stroke = ~75% of all claims</div>
+    </div>
+  </div>
+
+  <div class="illness-grid">
+    <div class="ill-item"><div class="ill-icon">🎗️</div><div class="ill-name">Cancer</div><div class="ill-stat">Canada's #1 cause of death, 30% of all deaths</div></div>
+    <div class="ill-item"><div class="ill-icon">💔</div><div class="ill-name">Heart Attack</div><div class="ill-stat">One Canadian dies of heart disease every 7 minutes</div></div>
+    <div class="ill-item"><div class="ill-icon">🧠</div><div class="ill-name">Stroke</div><div class="ill-stat">62,000/year, leading cause of long-term disability</div></div>
+    <div class="ill-item"><div class="ill-icon">🫀</div><div class="ill-name">25+ Other Conditions</div><div class="ill-stat">MS, organ failure, Parkinson's, Alzheimer's &amp; more</div></div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 Better Survival = Greater Financial Burden</div>
+    <div class="hbox-body">Modern medicine means more critical illness survivors — but also <strong>longer recovery periods and higher ongoing medical costs</strong>. Surviving is the goal. But surviving without financial protection can be devastating. CI insurance bridges that gap.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 4 — How It Works ══ -->
+<section class="slide" id="s3">
+  <div class="page-line"></div>
+  <div class="slide-num">03 / How It Works</div>
+  <h2 class="slide-title">Critical Illness Insurance:<br><span class="t">Simple. Powerful. Tax-Free.</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">Critical illness insurance is a <strong>diagnosis-triggered living benefit</strong>. If you're diagnosed with a covered condition, you receive a <strong>one-time, tax-free lump-sum payment</strong> — no receipts required, no restrictions on how you spend it.</p>
+
+  <div class="payout-flow">
+    <div class="pf-item">
+      <div class="pf-dot pd-r">1</div>
+      <div>
+        <div class="pf-title">Choose Your Coverage Amount &amp; Pay Premiums</div>
+        <div class="pf-body">Select a coverage amount based on your income, debts, and family needs (typically $50,000–$500,000). Pay regular premiums to keep the policy active.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-a">2</div>
+      <div>
+        <div class="pf-title">Receive a Covered Critical Illness Diagnosis</div>
+        <div class="pf-body">Your doctor diagnoses you with a condition listed in your policy (e.g., cancer, heart attack, stroke). Most policies require a <strong>survival period (typically 30 days)</strong> before you can file a claim.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-g">3</div>
+      <div>
+        <div class="pf-title">File Your Claim</div>
+        <div class="pf-body">Submit your diagnosis confirmation and medical documentation to the insurer for review and approval.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-b">4</div>
+      <div>
+        <div class="pf-title">Receive Your <strong>Tax-Free Lump-Sum Payment</strong></div>
+        <div class="pf-body">Once approved, you receive the full benefit in one payment. <strong>Completely tax-free, spend it however you choose</strong> — pay off debt, cover medications, hire help, or anything else you need.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 The Key: You Decide How to Use It</div>
+    <div class="hbox-body">Unlike medical reimbursement plans, CI insurance requires <strong>no receipts and no justification</strong>. Pay your mortgage, replace lost income, seek treatment abroad, or hire a caregiver — completely your choice.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 5 — Coverage Gap Table ══ -->
+<section class="slide" id="s4">
+  <div class="page-line"></div>
+  <div class="slide-num">04 / The Coverage Gap</div>
+  <h2 class="slide-title">Provincial Healthcare vs CI Insurance:<br><span class="t">What's the Difference?</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">Provincial healthcare handles <strong>basic life-saving treatment</strong>. Critical illness insurance fills the gaps that come after:</p>
+
+  <table class="cover-table">
+    <thead>
+      <tr>
+        <th>Expense Category</th>
+        <th class="th-yes">Provincial Health</th>
+        <th class="th-ci">CI Insurance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>In-hospital surgery / chemo / radiation</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Take-home oral cancer drugs</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Private hospital room</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Home nursing / caregiver</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Lost income replacement</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Mortgage / rent payments</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Physiotherapy / rehabilitation</td><td><span class="part">△</span> Limited</td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Childcare during treatment</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Travel &amp; accommodation for treatment</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+      <tr><td>Access to experimental / overseas treatments</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="alarm-box">
+    <div class="alarm-title">📍 Real-World Scenario</div>
+    <div class="alarm-body">Mary, 45, is diagnosed with breast cancer. The province covers surgery and IV chemo. But she still faces: <strong>$2,800/month oral targeted therapy + $1,500/month home care + $600 parking &amp; travel + $1,200 income gap</strong> = <strong>$6,100/month out-of-pocket</strong>. CI insurance eliminates this financial stress entirely.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 6 — How to Use the Payout ══ -->
+<section class="slide" id="s5">
+  <div class="page-line"></div>
+  <div class="slide-num">05 / Using Your Benefit</div>
+  <h2 class="slide-title">Five Ways<br><span class="t">People Use Their CI Payout</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">A CI insurance payout is a <strong>completely tax-free cash payment</strong>. Once received, you decide entirely how it's used. Here are the most common applications:</p>
+
+  <div class="payout-flow">
+    <div class="pf-item">
+      <div class="pf-dot pd-a">💰</div>
+      <div>
+        <div class="pf-title">Replace Lost Income</div>
+        <div class="pf-body">If treatment prevents you from working full-time, CI insurance <strong>replaces your salary</strong>, keeping household finances on track without depleting savings.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-r">🏠</div>
+      <div>
+        <div class="pf-title">Protect Your Mortgage &amp; Home</div>
+        <div class="pf-body">Ensure your family doesn't face losing their home. <strong>Keep up mortgage payments and rent</strong> without disrupting family life during an already stressful time.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-g">💊</div>
+      <div>
+        <div class="pf-title">Access Best-Available Treatments</div>
+        <div class="pf-body">Fund <strong>cutting-edge targeted therapies, immunotherapy, or clinical trials</strong> not covered by provincial health plans. Don't compromise treatment because of cost.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-b">🛡️</div>
+      <div>
+        <div class="pf-title">Protect Your Retirement Savings</div>
+        <div class="pf-body">Avoid dipping into RRSP or TFSA contributions. <strong>Preserve long-term financial plans</strong> — early RRSP withdrawals trigger immediate tax consequences that can derail your retirement.</div>
+      </div>
+    </div>
+    <div class="pf-item">
+      <div class="pf-dot pd-a">🌐</div>
+      <div>
+        <div class="pf-title">Access Expert Medical Opinions</div>
+        <div class="pf-body">Canada Life provides access to the <strong>top 5% of specialists globally</strong> for second opinions, treatment explanations, and navigation of the healthcare system — included with many CI policies.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 Return of Premium Option</div>
+    <div class="hbox-body">Many policies offer a <strong>Return of Premium (ROP)</strong> rider: if you never make a claim after a set period (as early as 10 years), you can choose to <strong>get all your premiums back</strong>. Use it and you're covered. Don't need it — you get your money returned.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 7 — CI vs Disability ══ -->
+<section class="slide" id="s6">
+  <div class="page-line"></div>
+  <div class="slide-num">06 / CI vs Disability Insurance</div>
+  <h2 class="slide-title">Critical Illness vs Disability:<br><span class="t">Do You Need Both?</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">Many people confuse CI insurance with disability insurance. They <strong>protect differently — they complement, not replace, each other:</strong></p>
+
+  <table class="ci-di-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th class="th-ci">Critical Illness</th>
+        <th class="th-di">Disability Insurance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Payment type</td><td class="ci-v">One-time tax-free lump sum</td><td class="di-v">Monthly income replacement</td></tr>
+      <tr><td>Trigger</td><td class="ci-v">Diagnosed with covered condition</td><td class="di-v">Unable to work due to illness/injury</td></tr>
+      <tr><td>Waiting period</td><td class="ci-v">None in some cases</td><td class="di-v">Usually 30–90 day wait</td></tr>
+      <tr><td>Coverage duration</td><td class="ci-v">Lifelong coverage</td><td class="di-v">Typically ends at age 65</td></tr>
+      <tr><td>Best for</td><td class="ci-v">Large lump-sum needs: drugs, mortgage payoff, major expenses</td><td class="di-v">Ongoing monthly living expenses</td></tr>
+    </tbody>
+  </table>
+
+  <div class="hbox">
+    <div class="hbox-title">✅ Best Strategy: Use Both Together</div>
+    <div class="hbox-body">CI insurance provides a <strong>large one-time cash injection</strong> for immediate high-cost needs. Disability insurance ensures <strong>steady monthly income</strong> to maintain your lifestyle over the long term. Together, they form a complete financial safety net against serious illness.</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🎯</span>
+    <div class="card-title">Especially Critical for the Self-Employed</div>
+    <div class="card-body">Many employees have group CI insurance through their employer — but <strong>freelancers, contractors, and business owners have no group coverage</strong>. For the self-employed, individual CI insurance is an essential personal safety net with no employer backup.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 8 — How Much Coverage ══ -->
+<section class="slide" id="s7">
+  <div class="page-line"></div>
+  <div class="slide-num">07 / Coverage Planning</div>
+  <h2 class="slide-title">How Much Coverage<br><span class="t">Do You Actually Need?</span></h2>
+  <div class="divider"></div>
+
+  <p class="bd">Your CI coverage amount should reflect your <strong>real financial exposure</strong>, not a random number. Here's how to estimate your needs:</p>
+
+  <div class="ex-box">
+    <div class="ex-title">📋 Coverage Needs Framework</div>
+    <div class="ex-row"><span class="ex-l">Projected income loss (6–24 months)</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">Uncovered drug / treatment costs</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">Mortgage / rent payments (6–12 months)</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">Home nursing / childcare support</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">Travel &amp; accommodation for treatment</span><span class="ex-v ev-r">+$X</span></div>
+    <div class="ex-row"><span class="ex-l">Recommended minimum coverage</span><span class="ex-v ev-a">$50,000+</span></div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📊</span>
+    <div class="card-title">Factors That Affect Your Premium</div>
+    <div class="card-body">
+      <strong>Age:</strong> The younger you are when you apply, the lower your premium<br>
+      <strong>Health status:</strong> Pre-existing conditions, BMI, family medical history<br>
+      <strong>Smoking status:</strong> Smokers pay significantly higher premiums<br>
+      <strong>Coverage amount:</strong> Higher benefit = higher premium<br>
+      <strong>Number of conditions covered:</strong> 4 conditions vs 25+ covered<br>
+      <strong>Riders:</strong> Return-of-premium option increases premiums
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">⏰ Earlier = Cheaper &amp; Easier to Qualify</div>
+    <div class="hbox-body">A healthy 30-year-old non-smoker can secure <strong>$100,000 CI coverage for approximately $100–$150/month</strong>. The same coverage purchased at age 50 could cost <strong>$400–$600/month</strong> — or be declined due to health changes. Lock in your rate while you're healthy.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 9 — Pros, Cons & Cautions ══ -->
+<section class="slide" id="s8">
+  <div class="page-line"></div>
+  <div class="slide-num">08 / Full Analysis</div>
+  <h2 class="slide-title">Critical Illness Insurance<br><span class="t">Pros, Cons &amp; Key Cautions</span></h2>
+  <div class="divider"></div>
+
+  <div class="procon">
+    <div class="pro-box">
+      <div class="bt">✅ Key Advantages</div>
+      <ul>
+        <li>Tax-free lump-sum on diagnosis</li>
+        <li>Spend it however you choose</li>
+        <li>Fills provincial health gaps</li>
+        <li>Protects retirement savings</li>
+        <li>Can pay off mortgage/debt</li>
+        <li>Covers 25+ serious conditions</li>
+        <li>Optional return-of-premium</li>
+        <li>Expert specialist access included</li>
+      </ul>
+    </div>
+    <div class="con-box">
+      <div class="bt">⚠️ Considerations</div>
+      <ul>
+        <li>Waiting period (usually 30 days)</li>
+        <li>Must meet precise condition definition</li>
+        <li>Premiums rise significantly with age</li>
+        <li>ROP rider adds to cost</li>
+        <li>17% claim denial rate*</li>
+        <li>Pre-existing conditions may be excluded</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📋</span>
+    <div class="card-title">Why Claims Get Denied — And How to Avoid It</div>
+    <div class="card-body">Munich Re's 2024 survey found <strong>71% of denied CI claims</strong> were rejected because the condition didn't meet the policy definition or wasn't listed. To protect yourself:<br><br>
+    • <strong>Read condition definitions carefully</strong> (e.g., early-stage vs. late-stage cancer)<br>
+    • Confirm exactly which conditions are covered<br>
+    • Disclose all pre-existing conditions honestly<br>
+    • Work with a licensed advisor to find the right policy</div>
+  </div>
+
+  <div class="alarm-box">
+    <div class="alarm-title">⚡ Most Important Recommendation</div>
+    <div class="alarm-body">CI insurance policies are complex. Condition definitions and coverage vary significantly between insurers. <strong>Always work with a licensed advisor</strong> to compare multiple insurers' terms and find the policy that best matches your specific health situation and financial needs.</div>
+  </div>
+</section>
+
+<!-- ══ SLIDE 10 — CTA ══ -->
+<section class="slide cta-slide" id="s9">
+  <div class="cta-ring">
+    <span class="cta-icon">❤️‍🩹</span>
+  </div>
+  <h2 class="cta-title">You Can't Predict<br><span style="color:var(--crimson-light);">Critical Illness.<br>You Can Prepare for It.</span></h2>
+  <p class="cta-desc">
+    Provincial healthcare answers the question: <em>"Will I survive?"</em><br>
+    Critical illness insurance answers: <strong style="color:var(--amber-light)">"After I survive, can my family still function financially?"</strong>
+  </p>
+
+  <div style="width:100%;max-width:340px;margin-bottom:22px;">
+    <div class="hbox" style="text-align:left;">
+      <div class="hbox-title">✅ CI Insurance Core Value</div>
+      <div class="hbox-body" style="font-size:12px;">
+        <strong style="color:var(--crimson-light)">Fill the Healthcare Gap:</strong> Drugs, home care, travel — covered<br>
+        <strong style="color:var(--crimson-light)">Income Protection:</strong> Family finances stay on track<br>
+        <strong style="color:var(--crimson-light)">Tax-Free Cash:</strong> One-time payment, zero restrictions<br>
+        <strong style="color:var(--crimson-light)">Protect Savings:</strong> Don't touch your RRSP or TFSA<br>
+        <strong style="color:var(--crimson-light)">Expert Access:</strong> Top 5% specialists for second opinions
+      </div>
+    </div>
+  </div>
+
+  <div style="width:100%;max-width:340px;margin-bottom:22px;background:rgba(192,57,43,0.09);border:1px solid rgba(192,57,43,0.28);border-radius:14px;padding:18px;">
+    <div style="font-size:9.5px;letter-spacing:2.5px;color:var(--crimson-light);text-transform:uppercase;margin-bottom:12px;font-weight:700;text-align:left;">🌟 Get In Touch Today</div>
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+      <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#C0392B,#7B241C);display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;">👩</div>
+      <div style="text-align:left;">
+        <div style="font-family:'Libre Baskerville',serif;font-size:17px;font-weight:700;color:#fff;">Elina</div>
+        <div style="font-size:10.5px;color:var(--text-muted);">Licensed Insurance &amp; Financial Advisor</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;text-align:left;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">📞</span>
+        <span style="font-size:13.5px;font-weight:600;color:var(--green-light);">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(39,174,96,0.12);border:1px solid rgba(39,174,96,0.25);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">💬</span>
+        <span style="font-size:12px;color:var(--green-light);">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:9px;text-decoration:none;">
+        <span style="width:28px;height:28px;border-radius:6px;background:rgba(192,57,43,0.15);border:1px solid rgba(192,57,43,0.3);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;">✉️</span>
+        <span style="font-size:11.5px;color:var(--crimson-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="cta-disc">This presentation is for general educational purposes only and does not constitute personal investment, medical, or legal advice. Statistics sourced from: Canadian Cancer Society (2024), Canadian Partnership Against Cancer (2021), Munich Re Canada (2024), Canada Life, Sun Life, RBC Insurance, PolicyAdvisor. Actual premiums and claim terms vary by insurer and individual health profile. Please consult a licensed insurance advisor before purchasing any policy.</p>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+function goTo(i) { slides[i].scrollIntoView({behavior:'smooth'}); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const i = Array.from(slides).indexOf(e.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    }
+  });
+}, {threshold: 0.5});
+slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
