@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Participating Account — Canada Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1B4332;
+    --forest-mid: #2D6A4F;
+    --forest-light: #52B788;
+    --cream: #F8F3E8;
+    --warm: #E9C46A;
+    --warm-light: #F4D78A;
+    --rust: #D4694A;
+    --green-bright: #40C472;
+    --text-muted: #8BA897;
+    --card-bg: rgba(255,255,255,0.06);
+    --card-border: rgba(82,183,136,0.25);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+  body { background: #0D2018; color: #E8F0EC; max-width: 480px; margin: 0 auto; }
+
+  .nav-dots { position: fixed; right: 12px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(82,183,136,0.3); cursor: pointer; transition: all 0.3s; }
+  .dot.active { background: var(--forest-light); transform: scale(1.4); }
+
+  .slide { min-height: 100vh; padding: 40px 24px 50px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; border-top: 3px solid transparent; border-image: linear-gradient(90deg, var(--forest-mid), var(--forest-light), var(--warm)) 1; }
+
+  .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--forest-light); margin-bottom: 10px; font-weight: 600; }
+  h1 { font-family: 'Libre Baskerville', serif; font-size: 30px; font-weight: 700; line-height: 1.2; color: #fff; margin-bottom: 8px; }
+  h2 { font-family: 'Libre Baskerville', serif; font-size: 22px; font-weight: 700; color: var(--cream); margin-bottom: 6px; line-height: 1.3; }
+  .subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 22px; line-height: 1.65; font-weight: 400; }
+  .section-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--warm); margin-bottom: 14px; font-weight: 600; }
+
+  #s1 { background: linear-gradient(160deg, #0D2018, #152B20, #0A1A10); }
+  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(82,183,136,0.15); border: 1px solid rgba(82,183,136,0.35); border-radius: 20px; padding: 5px 14px; font-size: 11px; color: var(--forest-light); margin-bottom: 20px; font-weight: 500; }
+  .hero-badge span { background: var(--forest-light); color: #0D2018; padding: 1px 8px; border-radius: 10px; font-size: 10px; font-weight: 700; }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+  .stat-box { background: rgba(82,183,136,0.1); border: 1px solid rgba(82,183,136,0.2); border-radius: 12px; padding: 14px 8px; text-align: center; }
+  .stat-num { font-family: 'Libre Baskerville', serif; font-size: 22px; font-weight: 700; color: var(--forest-light); line-height: 1; }
+  .stat-label { font-size: 10px; color: var(--text-muted); margin-top: 5px; line-height: 1.4; }
+
+  .contact-card { background: rgba(82,183,136,0.1); border: 1px solid rgba(82,183,136,0.25); border-radius: 14px; padding: 16px; margin-top: 20px; display: flex; align-items: center; gap: 14px; }
+  .contact-avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--forest-mid), var(--forest-light)); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .contact-name { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; color: #fff; }
+  .contact-title { font-size: 10px; color: var(--text-muted); margin: 2px 0 8px; }
+  .contact-btns { display: flex; gap: 8px; }
+  .contact-btn { padding: 5px 12px; border-radius: 20px; font-size: 11px; text-decoration: none; font-weight: 600; }
+  .btn-green { background: var(--forest-light); color: #0D2018; }
+  .btn-outline { background: transparent; border: 1px solid var(--forest-light); color: var(--forest-light); }
+
+  .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px; padding: 18px; margin-bottom: 12px; }
+  .card-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+  .card-title { font-family: 'Libre Baskerville', serif; font-size: 15px; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+  .card-body { font-size: 13px; color: #A8C4B0; line-height: 1.65; }
+  .card-body strong { color: var(--forest-light); }
+
+  .hbox { background: linear-gradient(135deg, rgba(27,67,50,0.6), rgba(45,106,79,0.4)); border: 1px solid rgba(82,183,136,0.3); border-radius: 14px; padding: 18px; margin: 14px 0; }
+  .hbox-title { font-size: 11px; letter-spacing: 1.5px; color: var(--warm); margin-bottom: 8px; font-weight: 700; text-transform: uppercase; }
+  .hbox-body { font-size: 13px; color: #C8DDD0; line-height: 1.7; }
+  .hbox-body strong { color: #fff; }
+
+  .flow-list { display: flex; flex-direction: column; gap: 14px; margin: 16px 0; }
+  .flow-item { display: flex; align-items: flex-start; gap: 14px; }
+  .flow-dot { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .fd-green { background: rgba(82,183,136,0.2); border: 1.5px solid var(--forest-light); color: var(--forest-light); }
+  .fd-warm { background: rgba(233,196,106,0.15); border: 1.5px solid var(--warm); color: var(--warm); }
+  .flow-title { font-family: 'Libre Baskerville', serif; font-size: 14px; font-weight: 700; color: var(--cream); margin-bottom: 3px; }
+  .flow-body { font-size: 12px; color: #8BA897; line-height: 1.6; }
+
+  .compare-table { width: 100%; border-collapse: collapse; margin: 14px 0; }
+  .compare-table th { background: rgba(27,67,50,0.7); color: var(--forest-light); font-size: 11px; padding: 10px 8px; text-align: center; letter-spacing: 0.5px; font-weight: 600; }
+  .compare-table th:first-child { text-align: left; }
+  .compare-table td { padding: 10px 8px; font-size: 12px; border-bottom: 1px solid rgba(82,183,136,0.1); text-align: center; color: #A8C4B0; }
+  .compare-table td:first-child { text-align: left; color: #C8DDD0; font-weight: 500; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .tick { color: var(--green-bright); font-size: 16px; }
+  .cross { color: var(--rust); font-size: 16px; }
+  .neutral { color: var(--warm); font-size: 13px; }
+
+  .bar-group { margin: 10px 0; }
+  .bar-label-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+  .bar-name { font-size: 12px; color: #C8DDD0; font-weight: 500; }
+  .bar-val { font-size: 13px; font-weight: 700; }
+  .bar-track { height: 28px; background: rgba(255,255,255,0.05); border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 11px; font-weight: 600; }
+  .bar-green { background: linear-gradient(90deg, var(--forest-mid), var(--forest-light)); color: #0D2018; }
+  .bar-warm { background: linear-gradient(90deg, #b8963a, var(--warm)); color: #0D2018; }
+  .bar-grey { background: linear-gradient(90deg, #3a4a40, #506055); color: #8BA897; }
+
+  .example-box { background: rgba(27,67,50,0.5); border: 1px solid rgba(82,183,136,0.25); border-radius: 14px; padding: 18px; margin: 14px 0; }
+  .example-title { font-size: 11px; color: var(--warm); margin-bottom: 14px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+  .ex-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(82,183,136,0.1); }
+  .ex-row:last-child { border-bottom: none; }
+  .ex-label { font-size: 12px; color: #8BA897; }
+  .ex-val { font-size: 13px; font-weight: 700; }
+  .ev-green { color: var(--green-bright); }
+  .ev-warm { color: var(--warm); }
+  .ev-muted { color: #8BA897; }
+
+  .procon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+  .pro-col, .con-col { border-radius: 12px; padding: 14px; }
+  .pro-col { background: rgba(64,196,114,0.08); border: 1px solid rgba(64,196,114,0.2); }
+  .con-col { background: rgba(212,105,74,0.08); border: 1px solid rgba(212,105,74,0.2); }
+  .pc-header { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 10px; text-transform: uppercase; }
+  .pc-header.pro { color: var(--green-bright); }
+  .pc-header.con { color: var(--rust); }
+  .pc-item { font-size: 11px; color: #A8C4B0; margin-bottom: 7px; padding-left: 14px; position: relative; line-height: 1.5; }
+  .pc-item::before { position: absolute; left: 0; }
+  .pro .pc-item::before { content: "✓"; color: var(--green-bright); }
+  .con .pc-item::before { content: "◦"; color: var(--rust); }
+
+  #s10 { background: linear-gradient(160deg, #0D2018, #152B20, #1B3A25); }
+  .ring-icon { width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--forest-light); display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px; background: rgba(82,183,136,0.1); }
+  .disclaimer { font-size: 10px; color: rgba(139,168,151,0.6); margin-top: 24px; line-height: 1.6; border-top: 1px solid rgba(82,183,136,0.15); padding-top: 16px; }
+
+  .deco-circle { position: absolute; border-radius: 50%; opacity: 0.06; pointer-events: none; }
+  .tag { display: inline-block; background: rgba(82,183,136,0.12); border: 1px solid rgba(82,183,136,0.25); border-radius: 20px; padding: 4px 12px; font-size: 11px; color: var(--forest-light); margin: 4px 3px; font-weight: 500; }
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(82,183,136,0.3), transparent); margin: 16px 0; }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots"></nav>
+
+<!-- SLIDE 1: HERO -->
+<section class="slide" id="s1">
+  <div class="deco-circle" style="width:280px;height:280px;background:var(--forest-mid);top:-80px;right:-100px;"></div>
+  <div class="deco-circle" style="width:180px;height:180px;background:var(--warm);bottom:-50px;left:-60px;"></div>
+
+  <div class="hero-badge">🌿 Participating Account <span>2026</span></div>
+  <h1>Steady Growth.<br>Low Risk.<br>Better Than GICs.</h1>
+  <p class="subtitle">Canada Life Participating Life Insurance — 30 years of proven, stable returns</p>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--warm);">5.5%</div>
+      <div class="stat-label">2024<br>Dividend Rate</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">30yr</div>
+      <div class="stat-label">Std Dev<br>only 1.47%</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" style="color:var(--green-bright);">Low Risk</div>
+      <div class="stat-label">Crisis-tested<br>stability</div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 Core Advantage</div>
+    <div class="hbox-body">The participating account pools policyholders' premiums into a professionally managed portfolio of <strong>bonds, equities, and real estate</strong>, using a <strong>smoothing mechanism</strong> that minimizes volatility — all while providing lifetime protection.</div>
+  </div>
+
+  <div style="margin-top:20px;background:rgba(82,183,136,0.08);border:1px solid rgba(82,183,136,0.28);border-radius:14px;padding:20px 18px;">
+    <div style="font-size:10px;letter-spacing:2px;color:var(--forest-light);text-transform:uppercase;margin-bottom:14px;font-weight:700;">📬 Your Advisor</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--forest-mid),var(--forest-light));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">👩</div>
+      <div>
+        <div style="font-family:'Libre Baskerville',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.2;">Elina</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">Licensed Insurance & Financial Advisor</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="tel:4168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(82,183,136,0.12);border:1px solid rgba(82,183,136,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📞</span>
+        <span style="font-size:14px;font-weight:600;color:var(--forest-light);letter-spacing:0.5px;">416-826-7591</span>
+      </a>
+      <a href="https://wa.me/14168267591" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(82,183,136,0.12);border:1px solid rgba(82,183,136,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">💬</span>
+        <span style="font-size:13px;color:var(--forest-light);">WhatsApp: 416-826-7591</span>
+      </a>
+      <a href="mailto:elina_insurance@hotmail.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="width:32px;height:32px;border-radius:8px;background:rgba(233,196,106,0.12);border:1px solid rgba(233,196,106,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">✉️</span>
+        <span style="font-size:12.5px;color:var(--warm-light);word-break:break-all;">elina_insurance@hotmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: WHAT IS IT -->
+<section class="slide" id="s2">
+  <div class="eyebrow">The Basics</div>
+  <h2>What Is a Participating Account?</h2>
+  <p class="subtitle">The investment engine inside participating life insurance</p>
+
+  <div class="card">
+    <span class="card-icon">🏦</span>
+    <div class="card-title">Legally Separate & Protected</div>
+    <div class="card-body">Under the <em>Insurance Companies Act</em>, Canada Life maintains the participating account <strong>completely separate</strong> from other company assets — dedicated exclusively to participating policyholders.</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">📊</span>
+    <div class="card-title">How Are Dividends Generated?</div>
+    <div class="card-body">When actual experience in <strong>investment returns, mortality, expenses, and taxes</strong> outperforms pricing assumptions, the surplus is distributed as <strong>policyholder dividends</strong>.</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🔄</span>
+    <div class="card-title">Bigger & Stronger Since 2020</div>
+    <div class="card-body">On Jan. 1, 2020, Canada Life merged three separate participating accounts into <strong>one larger combined account</strong> — greater risk diversification, lower management costs, more stable dividends.</div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">📌 Board Oversight</div>
+    <div class="hbox-body">The Board of Directors approves investment policies annually. The Appointed Actuary reports each year on the <strong>fairness and equitableness</strong> of expense and income allocations.</div>
+  </div>
+</section>
+
+<!-- SLIDE 3: VS GIC -->
+<section class="slide" id="s3">
+  <div class="eyebrow">Head-to-Head</div>
+  <h2>Participating Account vs. GICs</h2>
+  <p class="subtitle">Same low risk profile — dramatically different returns</p>
+
+  <div class="section-label">📈 Historical Average Annual Returns (Dec. 31, 2024)</div>
+
+  <div class="bar-group">
+    <div class="bar-label-row">
+      <span class="bar-name">🌿 Canada Life DSIR (30-year avg)</span>
+      <span class="bar-val" style="color:var(--forest-light);">7.22%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-green" style="width:82%">7.22%</div></div>
+  </div>
+
+  <div class="bar-group" style="margin-top:12px">
+    <div class="bar-label-row">
+      <span class="bar-name">🌿 Canada Life DSIR (10-year avg)</span>
+      <span class="bar-val" style="color:var(--forest-light);">5.52%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-green" style="width:63%">5.52%</div></div>
+  </div>
+
+  <div class="bar-group" style="margin-top:12px">
+    <div class="bar-label-row">
+      <span class="bar-name">💛 5-Year GICs (10-year avg)</span>
+      <span class="bar-val" style="color:var(--warm);">2.06%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-warm" style="width:24%">2.06%</div></div>
+  </div>
+
+  <div class="bar-group" style="margin-top:12px">
+    <div class="bar-label-row">
+      <span class="bar-name">🏛️ Gov't of Canada Bonds (10-yr)</span>
+      <span class="bar-val" style="color:#8BA897;">1.89%</span>
+    </div>
+    <div class="bar-track"><div class="bar-fill bar-grey" style="width:22%">1.89%</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <table class="compare-table">
+    <tr>
+      <th>Feature</th>
+      <th>🌿 Par Account</th>
+      <th>💛 GIC</th>
+    </tr>
+    <tr>
+      <td>Long-term return</td>
+      <td><span class="tick">✓ High</span></td>
+      <td><span class="cross">✗ Low</span></td>
+    </tr>
+    <tr>
+      <td>Volatility</td>
+      <td><span class="tick">✓ Very low</span></td>
+      <td><span class="neutral">● Fixed</span></td>
+    </tr>
+    <tr>
+      <td>Inflation protection</td>
+      <td><span class="tick">✓ Strong</span></td>
+      <td><span class="cross">✗ Weak</span></td>
+    </tr>
+    <tr>
+      <td>Lifetime coverage</td>
+      <td><span class="tick">✓ Yes</span></td>
+      <td><span class="cross">✗ No</span></td>
+    </tr>
+    <tr>
+      <td>Death benefit</td>
+      <td><span class="tick">✓ Tax-free</span></td>
+      <td><span class="cross">✗ None</span></td>
+    </tr>
+  </table>
+</section>
+
+<!-- SLIDE 4: STABILITY -->
+<section class="slide" id="s4">
+  <div class="eyebrow">Proven Stability</div>
+  <h2>Crisis-Tested Over 30 Years</h2>
+  <p class="subtitle">30-yr standard deviation: only 1.47% — vs. 15.62% for the stock market</p>
+
+  <div class="section-label">📅 Performance During Major Crises</div>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-green">💹</div>
+      <div>
+        <div class="flow-title">2000 — Dot-com Bust</div>
+        <div class="flow-body">TSX plunged, GIC rates collapsed — Canada Life dividend rate held at a steady <strong style="color:var(--forest-light)">8.71%–8.96%</strong></div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">🏦</div>
+      <div>
+        <div class="flow-title">2008–2009 — Global Financial Crisis</div>
+        <div class="flow-body">TSX fell 33%. GIC rates dropped below 2%. Participating account rate held at <strong style="color:var(--forest-light)">7.71%</strong></div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">🦠</div>
+      <div>
+        <div class="flow-title">2020 — COVID-19 Shock</div>
+        <div class="flow-body">Markets swung wildly. GICs near zero. Participating rate: <strong style="color:var(--forest-light)">5.10%</strong> — far outpacing alternatives</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">📈</div>
+      <div>
+        <div class="flow-title">2022 — Rate Hikes & Inflation</div>
+        <div class="flow-body">Bonds fell hard. TSX dropped 5.84%. But the participating rate <strong style="color:var(--warm)">rose to 5.25%</strong> — beginning a recovery trend</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">🔑 The Power of Smoothing</div>
+    <div class="hbox-body">The participating account uses a <strong>multi-year smoothing method</strong> to spread investment gains and losses over time — shielding your dividends from short-term market swings. This is a structural advantage GICs simply cannot replicate.</div>
+  </div>
+</section>
+
+<!-- SLIDE 5: HOW IT WORKS -->
+<section class="slide" id="s5">
+  <div class="eyebrow">Mechanism</div>
+  <h2>How Does the Account Work?</h2>
+  <p class="subtitle">Diversified assets + professional management + smoothing</p>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-green">1</div>
+      <div>
+        <div class="flow-title">Asset Allocation</div>
+        <div class="flow-body">Assets are split into <strong style="color:var(--forest-light)">near-term (next 10 years)</strong> — primarily fixed income — and <strong style="color:var(--forest-light)">long-term</strong> investments for growth</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">2</div>
+      <div>
+        <div class="flow-title">Diversified Long-Term Pool</div>
+        <div class="flow-body">Long-term assets include <strong style="color:var(--forest-light)">fixed income, common stocks, private equity, and real estate</strong> — broad diversification, lower total risk</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">3</div>
+      <div>
+        <div class="flow-title">Return Smoothing</div>
+        <div class="flow-body">Multi-year <strong style="color:var(--forest-light)">smoothing</strong> averages investment returns across periods — the dividend scale interest rate changes gradually, not abruptly</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">4</div>
+      <div>
+        <div class="flow-title">Annual Dividend Review</div>
+        <div class="flow-body">Each year the Appointed Actuary evaluates <strong style="color:var(--warm)">investment, mortality, expenses, and taxes</strong> to set a fair dividend scale for policyholders</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">5</div>
+      <div>
+        <div class="flow-title">Board-Level Governance</div>
+        <div class="flow-body">The Board approves investment policies annually and receives fairness reports — ensuring <strong style="color:var(--warm)">policyholder interests are protected</strong> at every level</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 6: DATA -->
+<section class="slide" id="s6">
+  <div class="eyebrow">Real Numbers</div>
+  <h2>Historical Dividend Rate Data</h2>
+  <p class="subtitle">30 years of real performance — see it clearly</p>
+
+  <div class="example-box">
+    <div class="example-title">📊 Canada Life DSIR vs. Market Rates (Selected Years)</div>
+    <div class="ex-row">
+      <span class="ex-label">Year</span>
+      <span class="ex-val ev-green">Par Rate</span>
+      <span class="ex-val" style="color:var(--warm);font-size:11px">5yr GIC</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2008 — Financial crisis</span>
+      <span class="ex-val ev-green">7.71%</span>
+      <span class="ex-val ev-muted">3.01%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2016 — Ultra-low rates</span>
+      <span class="ex-val ev-green">6.00%</span>
+      <span class="ex-val ev-muted">1.42%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2020 — COVID-19</span>
+      <span class="ex-val ev-green">5.10%</span>
+      <span class="ex-val ev-muted">1.28%</span>
+    </div>
+    <div class="ex-row">
+      <span class="ex-label">2022 — Inflation surge</span>
+      <span class="ex-val ev-green">5.25%</span>
+      <span class="ex-val ev-warm">2.87%</span>
+    </div>
+    <div class="ex-row" style="background:rgba(82,183,136,0.08);border-radius:8px;padding:8px;">
+      <span class="ex-label" style="color:var(--cream);font-weight:600">2024 — Today</span>
+      <span class="ex-val ev-green" style="font-size:16px">5.50%</span>
+      <span class="ex-val ev-warm">3.67%</span>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">📐 The Numbers That Matter</div>
+    <div class="hbox-body">
+      <strong>30-year average DSIR: 7.22%</strong><br>
+      30-year standard deviation: <strong>only 1.47%</strong> (low volatility)<br>
+      TSX 30-year std deviation: <strong>15.62%</strong> (high volatility)<br>
+      30-year average GIC rate: <strong>2.98%</strong> (low return)
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 7: WHO IS IT FOR -->
+<section class="slide" id="s7">
+  <div class="eyebrow">Ideal Clients</div>
+  <h2>Who Should Consider This?</h2>
+  <p class="subtitle">The smart choice for conservative, long-term investors</p>
+
+  <div class="card">
+    <span class="card-icon">👴</span>
+    <div class="card-title">GIC Maturing — What's Next?</div>
+    <div class="card-body">When GIC rates drop at renewal, the participating account offers <strong>historically higher returns</strong> plus lifetime protection — a powerful alternative for maturing GIC funds</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">💰</span>
+    <div class="card-title">Worried About Inflation Eroding Savings?</div>
+    <div class="card-body">GIC rates frequently fall below inflation. The participating account's <strong>30-year average of 7.22%</strong> has historically outpaced inflation by a wide margin</div>
+  </div>
+
+  <div class="card">
+    <span class="card-icon">🛡️</span>
+    <div class="card-title">Wealth Transfer & Estate Planning</div>
+    <div class="card-body">While earning stable returns, policyholders can also pass on a <strong>tax-free death benefit</strong> to heirs. GICs offer no such legacy feature</div>
+  </div>
+
+  <div class="section-label" style="margin-top:8px">Best-Fit Profile</div>
+  <div>
+    <span class="tag">Ages 50–65</span>
+    <span class="tag">Conservative investor</span>
+    <span class="tag">GIC rollover</span>
+    <span class="tag">Stable income focus</span>
+    <span class="tag">Estate planning</span>
+    <span class="tag">Long-term horizon</span>
+  </div>
+</section>
+
+<!-- SLIDE 8: PROS & CONS -->
+<section class="slide" id="s8">
+  <div class="eyebrow">Balanced View</div>
+  <h2>Strengths & Considerations</h2>
+  <p class="subtitle">A complete picture for informed decisions</p>
+
+  <div class="procon-grid">
+    <div class="pro-col">
+      <div class="pc-header pro">✦ Strengths</div>
+      <div class="pro">
+        <div class="pc-item">Significantly higher historical return vs. GIC</div>
+        <div class="pc-item">30-yr std deviation only 1.47%</div>
+        <div class="pc-item">Lifetime life insurance coverage</div>
+        <div class="pc-item">Tax-free death benefit</div>
+        <div class="pc-item">Smoothing shields from market swings</div>
+        <div class="pc-item">Dividends can compound via paid-up additions</div>
+        <div class="pc-item">Diversified multi-asset portfolio</div>
+      </div>
+    </div>
+    <div class="con-col">
+      <div class="pc-header con">◦ To Consider</div>
+      <div class="con">
+        <div class="pc-item">Dividends not guaranteed</div>
+        <div class="pc-item">Best with long-term commitment</div>
+        <div class="pc-item">Early surrender may reduce value</div>
+        <div class="pc-item">Medical underwriting required</div>
+        <div class="pc-item">Less short-term flexibility than GICs</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:8px">
+    <span class="card-icon">💡</span>
+    <div class="card-title">Not Guaranteed — But Remarkably Consistent</div>
+    <div class="card-body">Even through the 2008 financial crisis and COVID-19 pandemic, Canada Life <strong>never stopped paying dividends</strong>. The 30-year track record speaks for itself.</div>
+  </div>
+</section>
+
+<!-- SLIDE 9: HOW TO START -->
+<section class="slide" id="s9">
+  <div class="eyebrow">Next Steps</div>
+  <h2>How to Get Started</h2>
+  <p class="subtitle">Four simple steps to begin building wealth with stability</p>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot fd-green">1</div>
+      <div>
+        <div class="flow-title">Review Your Current Holdings</div>
+        <div class="flow-body">Identify <strong style="color:var(--forest-light)">GICs, savings accounts</strong>, and other low-yield assets — assess which funds could be redirected and when</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">2</div>
+      <div>
+        <div class="flow-title">Complete Underwriting</div>
+        <div class="flow-body">A simple <strong style="color:var(--forest-light)">health questionnaire</strong> — Elina will guide you to the right policy type and premium structure (single pay or multi-year)</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-green">3</div>
+      <div>
+        <div class="flow-title">Choose Your Dividend Option</div>
+        <div class="flow-body">Dividends can be used to <strong style="color:var(--forest-light)">purchase paid-up additions</strong> (compound growth), offset premiums, accumulate at interest, or receive as cash</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot fd-warm">4</div>
+      <div>
+        <div class="flow-title">Hold Long-Term & Review Annually</div>
+        <div class="flow-body">Value grows as the account compounds. Elina will <strong style="color:var(--warm)">review your policy performance each year</strong> to keep it aligned with your goals</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox">
+    <div class="hbox-title">💡 Optimal Strategy</div>
+    <div class="hbox-body">Redirect maturing GIC funds into participating life insurance. Use <strong>paid-up additions</strong> as your dividend option for compounding growth — while keeping a portion liquid for near-term needs.</div>
+  </div>
+</section>
+
+<!-- SLIDE 10: FINAL CTA -->
+<section class="slide" id="s10">
+  <div class="deco-circle" style="width:250px;height:250px;background:var(--forest-mid);top:-80px;right:-80px;"></div>
+
+  <div class="ring-icon">🌿</div>
+  <h2 style="text-align:center;font-size:24px;margin-bottom:8px">Start Your<br>Smarter Growth Journey</h2>
+  <p class="subtitle" style="text-align:center">Participating life insurance — the intelligent alternative to GICs</p>
+
+  <div class="hbox" style="margin:20px 0">
+    <div class="hbox-title">🌿 Why the Participating Account?</div>
+    <div class="hbox-body">
+      ✓ <strong>30-year avg return of 7.22%</strong> vs. GIC avg of 2.98%<br>
+      ✓ <strong>Extremely low volatility: std dev 1.47%</strong><br>
+      ✓ <strong>Lifetime protection + growing dividends</strong><br>
+      ✓ 2024 dividend scale interest rate: <strong>5.50%</strong>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-avatar">👩‍💼</div>
+    <div>
+      <div class="contact-name">Elina</div>
+      <div class="contact-title">Licensed Insurance & Financial Advisor · 416-826-7591</div>
+      <div class="contact-btns">
+        <a href="tel:4168267591" class="contact-btn btn-green">📞 Call Now</a>
+        <a href="https://wa.me/14168267591" class="contact-btn btn-outline">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin:10px 0">
+    <a href="mailto:elina_insurance@hotmail.com" style="font-size:12px;color:var(--text-muted);text-decoration:none">📧 elina_insurance@hotmail.com</a>
+  </div>
+
+  <div class="disclaimer">This presentation is for general educational purposes only and does not constitute personal investment, tax, or legal advice. Please consult a licensed financial advisor and tax professional before making any investment decisions. Past investment performance does not guarantee future results. Dividends are not guaranteed and reflect the experience of the participating account. Fund investments carry risk; values may decrease.</div>
+</section>
+
+<script>
+  const slideIds = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'];
+  const navDots = document.getElementById('navDots');
+  slideIds.forEach((id, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.onclick = () => document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    navDots.appendChild(dot);
+  });
+  const dots = document.querySelectorAll('.dot');
+  const slides = slideIds.map(id => document.getElementById(id));
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const i = slides.indexOf(e.target);
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[i]) dots[i].classList.add('active');
+      }
+    });
+  }, {threshold: 0.5});
+  slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
