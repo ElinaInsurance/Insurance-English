@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Million Dollar Baby — A Lifetime Plan From Birth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --royal: #1E5FA8; --royal-light: #3A80CC; --sky: #EBF4FF; --sky2: #D6EAFF;
+  --blue-mid: #5B9BD5; --gold: #B8832A; --gold-light: #D4A440; --gold-pale: #FDF3DC;
+  --green: #1A9E5C; --red: #D94040; --purple: #7A5BA8;
+  --text-dark: #1A2A3A; --text-mid: #3D556B; --text-muted: #7A96B0;
+  --bg-page: #F4F8FF; --bg-card: #FFFFFF;
+  --border: rgba(30,95,168,0.18); --border-light: rgba(30,95,168,0.10);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { background: var(--bg-page); color: var(--text-dark); font-family: 'DM Sans', sans-serif; max-width: 480px; margin: 0 auto; overflow-x: hidden; }
+
+.nav-dots { position: fixed; right: 10px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 8px; z-index: 100; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(30,95,168,0.2); border: 1.5px solid rgba(30,95,168,0.35); cursor: pointer; transition: all 0.3s; }
+.dot.active { background: var(--royal); transform: scale(1.4); border-color: var(--royal); }
+
+.slide { min-height: 100vh; padding: 52px 22px 44px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.slide::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--royal), var(--blue-mid), var(--gold)); }
+
+.slide-hero { background: linear-gradient(160deg, #1A4A8C 0%, #1E5FA8 45%, #1A4070 100%); color: #fff; }
+.hero-badge { display: inline-block; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; padding: 5px 14px; border-radius: 20px; margin-bottom: 22px; }
+.hero-title { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; line-height: 1.15; color: #fff; margin-bottom: 8px; }
+.hero-title span { background: linear-gradient(135deg, #FFE08A, #F0C040); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-sub { font-size: 13px; color: rgba(255,255,255,0.78); margin-bottom: 26px; line-height: 1.6; }
+.stat-row { display: flex; gap: 10px; margin-bottom: 28px; }
+.stat-box { flex: 1; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.28); border-radius: 12px; padding: 12px 8px; text-align: center; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #FFE08A; }
+.stat-label { font-size: 10px; color: rgba(255,255,255,0.72); margin-top: 3px; line-height: 1.3; }
+
+.hero-contact { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28); border-radius: 16px; padding: 20px 18px; margin-top: 6px; }
+.hc-label { font-size: 10px; letter-spacing: 2px; color: #FFE08A; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+.hc-name-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.hc-avatar { width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.22); border: 2px solid rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.hc-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #fff; }
+.hc-title { font-size: 11px; color: rgba(255,255,255,0.68); margin-top: 2px; }
+.hc-links { display: flex; flex-direction: column; gap: 10px; }
+.hc-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.hc-icon { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 15px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); }
+.hc-link-text { font-size: 14px; font-weight: 600; color: #AAE8C8; letter-spacing: 0.3px; }
+.hc-link-text.gold { color: #FFE08A; font-size: 13px; word-break: break-all; font-weight: 500; }
+
+.slide-label { font-size: 10px; letter-spacing: 2px; color: var(--royal); text-transform: uppercase; font-weight: 700; margin-bottom: 6px; }
+.slide-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; line-height: 1.25; color: var(--text-dark); margin-bottom: 5px; }
+.slide-title .accent { color: var(--royal); }
+.slide-subtitle { font-size: 12px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.55; }
+.divider-line { height: 2px; background: linear-gradient(90deg, var(--royal), var(--blue-mid), transparent); margin-bottom: 20px; border-radius: 2px; }
+
+.cards { display: flex; flex-direction: column; gap: 10px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: 0 2px 8px rgba(30,95,168,0.06); }
+.card-icon { font-size: 20px; margin-bottom: 6px; display: block; }
+.card-title { font-size: 13px; font-weight: 700; color: var(--royal); margin-bottom: 4px; }
+.card-body { font-size: 12px; color: var(--text-mid); line-height: 1.6; }
+
+.hbox { background: linear-gradient(135deg, #EBF4FF, #D6EAFF); border: 1px solid rgba(30,95,168,0.22); border-radius: 12px; padding: 14px 16px; margin-top: 14px; }
+.hbox-title { font-size: 12px; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.hbox-body { font-size: 12px; color: var(--text-mid); line-height: 1.65; }
+.hbox.warm { background: linear-gradient(135deg, #FDF3DC, #FBEBC8); border-color: rgba(184,131,42,0.25); }
+
+.flow-list { display: flex; flex-direction: column; gap: 12px; }
+.flow-item { display: flex; align-items: flex-start; gap: 12px; }
+.flow-dot { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #fff; background: linear-gradient(135deg, var(--royal), var(--blue-mid)); box-shadow: 0 3px 10px rgba(30,95,168,0.25); }
+.flow-title { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+.flow-body { font-size: 11px; color: var(--text-muted); line-height: 1.55; }
+
+.callout-row { display: flex; gap: 10px; margin-bottom: 14px; }
+.callout { flex: 1; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; box-shadow: 0 2px 8px rgba(30,95,168,0.06); }
+.callout-num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--royal); line-height: 1.1; }
+.callout-num.green { color: var(--green); }
+.callout-num.gold { color: var(--gold); }
+.callout-label { font-size: 10px; color: var(--text-muted); margin-top: 4px; line-height: 1.3; }
+
+.data-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.data-table th { font-size: 10px; color: var(--royal); font-weight: 700; padding: 8px 5px; text-align: center; border-bottom: 2px solid var(--border); background: var(--sky2); }
+.data-table td { font-size: 11px; color: var(--text-mid); padding: 8px 5px; text-align: center; border-bottom: 1px solid var(--border-light); }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table td.age { font-weight: 700; color: var(--text-dark); }
+.data-table td.withdraw { color: var(--red); font-weight: 700; }
+.data-table td.divi { color: var(--gold); font-weight: 600; }
+.data-table td.total { color: var(--green); font-weight: 700; }
+.data-table tr.hl td { background: rgba(217,64,64,0.06); }
+.table-box { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 12px; box-shadow: 0 2px 8px rgba(30,95,168,0.06); }
+.table-note { font-size: 10px; color: var(--text-muted); margin-top: 8px; line-height: 1.4; }
+
+.scenario-pill { display: inline-block; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-bottom: 12px; background: var(--sky2); color: var(--royal); border: 1px solid var(--border); }
+
+.cta-ring { width: 74px; height: 74px; border-radius: 50%; border: 3px solid var(--royal); background: linear-gradient(135deg, var(--sky), #fff); display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px; box-shadow: 0 4px 20px rgba(30,95,168,0.18); }
+.cta-contact { background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 20px 18px; margin-bottom: 16px; box-shadow: 0 4px 16px rgba(30,95,168,0.09); }
+.cta-label { font-size: 10px; letter-spacing: 2px; color: var(--royal); text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+.cc-name-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.cc-avatar { width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--royal), var(--blue-mid)); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+.cc-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--text-dark); }
+.cc-title { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.cc-links { display: flex; flex-direction: column; gap: 10px; }
+.cc-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.cc-icon { width: 34px; height: 34px; border-radius: 9px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 15px; background: rgba(26,158,92,0.1); border: 1px solid rgba(26,158,92,0.25); }
+.cc-icon.gold-bg { background: rgba(184,131,42,0.1); border-color: rgba(184,131,42,0.25); }
+.cc-link-text { font-size: 14px; font-weight: 600; color: var(--green); letter-spacing: 0.3px; }
+.cc-link-text.gold { color: var(--gold); font-size: 13px; word-break: break-all; font-weight: 500; }
+.disclaimer { font-size: 10px; color: var(--text-muted); line-height: 1.6; border-top: 1px solid var(--border-light); padding-top: 12px; margin-top: 4px; }
+
+.slide-2 { background: #F4F8FF; } .slide-3 { background: #EEF4FC; } .slide-4 { background: #F6F9FF; }
+.slide-5 { background: #F4F8FF; } .slide-6 { background: #EEF4FC; } .slide-7 { background: #FBF8F2; }
+.slide-8 { background: #F4F8FF; } .slide-9 { background: #EEF4FC; }
+.slide-cta { background: linear-gradient(160deg, #EBF4FF 0%, #F4F8FF 60%, #FDF3DC 100%); }
+</style>
+</head>
+<body>
+
+<nav class="nav-dots" id="navDots">
+  <div class="dot active" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+  <div class="dot" onclick="goTo(4)"></div>
+  <div class="dot" onclick="goTo(5)"></div>
+  <div class="dot" onclick="goTo(6)"></div>
+  <div class="dot" onclick="goTo(7)"></div>
+  <div class="dot" onclick="goTo(8)"></div>
+  <div class="dot" onclick="goTo(9)"></div>
+</nav>
+
+<!-- SLIDE 1: HERO -->
+<section class="slide slide-hero" id="s0">
+  <div class="hero-badge">A Lifetime Plan From Birth · 2026 Edition</div>
+  <div class="hero-title"><span>Million Dollar</span> Baby</div>
+  <div class="hero-sub">Start at birth. Contribute $12,000/year for 20 years.<br>One policy — for school, business, retirement & legacy.</div>
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="stat-num">$240K</div>
+      <div class="stat-label">Total contributed<br>($12,000 × 20)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">$1.16M</div>
+      <div class="stat-label">Coverage active<br>from Year 1</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">$16.15M</div>
+      <div class="stat-label">Account value<br>at age 100</div>
+    </div>
+  </div>
+
+  <div class="hero-contact">
+    <div class="hc-label">📬 Contact Your Advisor</div>
+    <div class="hc-name-row">
+      <div class="hc-avatar">👩</div>
+      <div>
+        <div class="hc-name">Elina</div>
+        <div class="hc-title">Licensed Insurance & Financial Advisor</div>
+      </div>
+    </div>
+    <div class="hc-links">
+      <a href="tel:4168267591" class="hc-link"><span class="hc-icon">📞</span><span class="hc-link-text">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="hc-link"><span class="hc-icon">💬</span><span class="hc-link-text">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="hc-link"><span class="hc-icon">✉️</span><span class="hc-link-text gold">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 2: HOW THE PLAN WORKS -->
+<section class="slide slide-2" id="s1">
+  <div class="slide-label">Plan Overview</div>
+  <div class="slide-title">How the <span class="accent">Million Dollar Baby</span> Plan Works</div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">From the moment your child is born, build a foundation for life</div>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-dot">1</div>
+      <div>
+        <div class="flow-title">Insure the Child at Age 0</div>
+        <div class="flow-body">Set up a $1.16M lifetime policy for your newborn — coverage is active immediately and lasts a lifetime</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot">2</div>
+      <div>
+        <div class="flow-title">Contribute $12,000/Year for 20 Years</div>
+        <div class="flow-body">Parents contribute $12,000 annually (about $1,000/month), $240K total — then no more premiums ever</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot">3</div>
+      <div>
+        <div class="flow-title">The Account Grows Automatically</div>
+        <div class="flow-body">The account compounds tax-sheltered at a steady rate — value can only go up, and parents keep full control</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-dot">4</div>
+      <div>
+        <div class="flow-title">Withdraw Flexibly, Whenever Needed</div>
+        <div class="flow-body">Draw cash for university, a business, a home, or retirement — whatever is left keeps growing and passes to the next generation</div>
+      </div>
+    </div>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">💡 The Core Idea</div>
+    <div class="hbox-body">Parents contribute only for the first 20 years, but the child benefits for <strong>a lifetime</strong>. One policy solves four needs at once: education, business capital, retirement income, and wealth transfer.</div>
+  </div>
+</section>
+
+<!-- SLIDE 3: THE CASE SETUP -->
+<section class="slide slide-3" id="s2">
+  <div class="slide-label">Case Setup</div>
+  <div class="slide-title">A Real <span class="accent">Planning Example</span></div>
+  <div class="divider-line"></div>
+  <div class="callout-row">
+    <div class="callout">
+      <div class="callout-num">Age 0</div>
+      <div class="callout-label">Insured<br>(newborn child)</div>
+    </div>
+    <div class="callout">
+      <div class="callout-num gold">$12,000</div>
+      <div class="callout-label">Annual premium<br>paid up in 20 yrs</div>
+    </div>
+  </div>
+  <div class="callout-row">
+    <div class="callout">
+      <div class="callout-num green">$1.16M</div>
+      <div class="callout-label">Initial coverage<br>lifetime protection</div>
+    </div>
+    <div class="callout">
+      <div class="callout-num">$240K</div>
+      <div class="callout-label">Total invested<br>(principal)</div>
+    </div>
+  </div>
+  <div class="cards" style="margin-top:6px;">
+    <div class="card">
+      <span class="card-icon">👶</span>
+      <div class="card-title">Plan: Permanent Life Insurance</div>
+      <div class="card-body">Insured is a 0-year-old child, coverage of <strong>$1,160,542</strong> for life, annual premium of <strong>$12,000</strong>, fully paid up after 20 years.</div>
+    </div>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">⚠️ Important: Parents' Coverage Comes First</div>
+    <div class="hbox-body">Before planning for the child, <strong>make sure the parents themselves are properly protected first</strong>. Parents are the family's breadwinners — the child's plan is only truly secure once the adults' protection is in place.</div>
+  </div>
+</section>
+
+<!-- SLIDE 4: HOW THE ACCOUNT GROWS -->
+<section class="slide slide-4" id="s3">
+  <div class="slide-label">How the Account Grows</div>
+  <div class="slide-title">$240K In, <span class="accent">Millions Out</span></div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">Contribute $12,000/year for 20 years — then the account compounds tax-free</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>Child's Age</th><th>Account Value<br>(cash value)</th><th>Death Benefit<br>(total coverage)</th></tr>
+      <tr><td class="age">1</td><td class="divi">$464</td><td>$1.17M</td></tr>
+      <tr><td class="age">10</td><td class="divi">$44.7K</td><td>$1.35M</td></tr>
+      <tr><td class="age">20</td><td class="divi">$299K</td><td>$2.02M</td></tr>
+      <tr><td class="age">30</td><td class="divi">$571K</td><td>$2.96M</td></tr>
+      <tr><td class="age">50</td><td class="total">$1.73M</td><td>$4.88M</td></tr>
+      <tr><td class="age">65</td><td class="total">$3.71M</td><td>$6.77M</td></tr>
+      <tr><td class="age">85</td><td class="total">$9.06M</td><td>$10.71M</td></tr>
+      <tr class="hl"><td class="age">100</td><td class="total">$16.15M</td><td>$16.15M</td></tr>
+    </table>
+    <div class="table-note">*All figures rounded, based on a steady dividend assumption; actual results may vary. Full year-by-year data available from your advisor.</div>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">📈 The Power of Compounding</div>
+    <div class="hbox-body">Only $240K of principal goes in, but thanks to decades of tax-sheltered compounding, the account reaches <strong style="color:var(--green)">$16.15M</strong> by age 100 — over <strong>67× growth</strong>.</div>
+  </div>
+</section>
+
+<!-- SLIDE 5: USE 1 EDUCATION -->
+<section class="slide slide-5" id="s4">
+  <div class="scenario-pill">USE ① Education / Spending Money</div>
+  <div class="slide-title">Age 18: <span class="accent">Withdraw for University</span></div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">Child attends university ages 18–21, withdrawing $30,000/year — $120,000 total over 4 years</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>Child's Age</th><th>Education Withdrawal</th><th>Account Balance<br>(cash value)</th></tr>
+      <tr class="hl"><td class="age">18</td><td class="withdraw">−$30,000</td><td class="divi">$205K</td></tr>
+      <tr class="hl"><td class="age">19</td><td class="withdraw">−$30,000</td><td class="divi">$211K</td></tr>
+      <tr class="hl"><td class="age">20</td><td class="withdraw">−$30,000</td><td class="divi">$206K</td></tr>
+      <tr class="hl"><td class="age">21</td><td class="withdraw">−$30,000</td><td class="divi">$203K</td></tr>
+      <tr><td class="age">30</td><td>—</td><td class="divi">$400K</td></tr>
+      <tr><td class="age">50</td><td>—</td><td class="total">$1.28M</td></tr>
+      <tr><td class="age">100</td><td>—</td><td class="total">$12.3M</td></tr>
+    </table>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">✨ The Magic</div>
+    <div class="hbox-body">$120,000 is withdrawn for 4 years of university, yet the account <strong>keeps compounding</strong>. By the child's age 50 it has grown to <strong style="color:var(--green)">nearly $1.3M</strong> — money was taken out, and it still grew.</div>
+  </div>
+</section>
+
+<!-- SLIDE 6: USE 2 BUSINESS -->
+<section class="slide slide-6" id="s5">
+  <div class="scenario-pill">USE ② Business Start-Up Capital</div>
+  <div class="slide-title">Age 30: <span class="accent">Withdraw $300K</span></div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">University was funded by an RESP, leaving this account untouched — then $300,000 is withdrawn at 30 to start a business</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>Child's Age</th><th>Business Withdrawal</th><th>Account Balance<br>(cash value)</th></tr>
+      <tr><td class="age">20</td><td>—</td><td class="divi">$299K</td></tr>
+      <tr class="hl"><td class="age">30</td><td class="withdraw">−$300,000</td><td class="divi">$271K</td></tr>
+      <tr><td class="age">40</td><td>—</td><td class="divi">$523K</td></tr>
+      <tr><td class="age">50</td><td>—</td><td class="total">$936K</td></tr>
+      <tr><td class="age">70</td><td>—</td><td class="total">$2.67M</td></tr>
+      <tr><td class="age">100</td><td>—</td><td class="total">$9.38M</td></tr>
+    </table>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">💼 A Flexible Pool of Capital</div>
+    <div class="hbox-body">After taking $300K at age 30 to launch a business, the account still keeps growing. By age 50 it has recovered to <strong style="color:var(--green)">nearly $950K</strong> — building a business and building wealth at the same time.</div>
+  </div>
+</section>
+
+<!-- SLIDE 7: USE 3 RETIREMENT -->
+<section class="slide slide-7" id="s6">
+  <div class="scenario-pill">USE ③ Parent / Child Retirement Income</div>
+  <div class="slide-title">A <span class="accent">Retirement Income</span> Stream</div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">If the child sails through school and career without touching the account, it can fund retirement — for the parents or the child</div>
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">🏖️</span>
+      <div class="card-title">As Parents' Retirement (if parent was 30 at birth)</div>
+      <div class="card-body">Parents withdraw <strong>$40,000/year</strong> from ages 65–85 — <strong>$800K</strong> total over 20 years. Yet by the child's age 70 the account has still grown to <strong style="color:var(--green)">nearly $1.84M</strong>.</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🌅</span>
+      <div class="card-title">As the Child's Own Retirement</div>
+      <div class="card-body">If untouched, the child withdraws <strong>$150,000/year</strong> from ages 65–100 — <strong>$5.25M</strong> total over 35 years. At age 100 it still leaves <strong style="color:var(--green)">nearly $4.4M</strong> in tax-free cash for the next generation.</div>
+    </div>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">🔄 One Account, Decades of Cash Flow</div>
+    <div class="hbox-body">The defining feature of this plan: <strong>you can barely draw it down</strong>. Because the account often grows faster than the withdrawals, it keeps producing cash flow year after year.</div>
+  </div>
+</section>
+
+<!-- SLIDE 8: USE 4 THREE GENERATIONS -->
+<section class="slide slide-8" id="s7">
+  <div class="scenario-pill">USE ④ One Policy, Three Generations</div>
+  <div class="slide-title"><span class="accent">Three Generations</span> Benefit</div>
+  <div class="divider-line"></div>
+  <div class="slide-subtitle">The same Million Dollar Baby plan can serve three generations in turn</div>
+  <div class="table-box">
+    <table class="data-table">
+      <tr><th>Stage</th><th>Annual Withdrawal</th><th>Total Drawn</th></tr>
+      <tr class="hl"><td class="age">Gen 1<br>Parents, age 65–85</td><td class="withdraw">$40,000</td><td class="total">$800K</td></tr>
+      <tr class="hl"><td class="age">Gen 2<br>Child, age 65–100</td><td class="withdraw">$50,000–<br>$60,000</td><td class="total">$1.75M</td></tr>
+      <tr><td class="age">Gen 3<br>Grandchildren (after 100)</td><td>Tax-free inheritance</td><td class="total">~$1.9M</td></tr>
+    </table>
+    <div class="table-note">*Parents draw retirement income first, then the child, and a large tax-free sum still passes to the grandchildren.</div>
+  </div>
+  <div class="hbox warm">
+    <div class="hbox-title">🏆 The Gift Parents Give Their Child</div>
+    <div class="hbox-body">✅ Free lifetime protection for the child<br>✅ Funds for education, business, home & retirement<br>✅ Parents keep control of the policy & cash value<br>✅ Wealth passes tax-free across generations</div>
+  </div>
+</section>
+
+<!-- SLIDE 9: TIP + EDUCATION COST -->
+<section class="slide slide-9" id="s8">
+  <div class="slide-label">Practical Tips</div>
+  <div class="slide-title">The Earlier You Start, <span class="accent">the Better</span></div>
+  <div class="divider-line"></div>
+  <div class="cards">
+    <div class="card">
+      <span class="card-icon">🚀</span>
+      <div class="card-title">Booster Tip: Additional Deposit Option (ADO)</div>
+      <div class="card-body">Adding an <strong>Additional Deposit (ADO)</strong> on top of the base premium can dramatically accelerate cash-value growth — supercharging the account.</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🎓</span>
+      <div class="card-title">Education Only Gets More Expensive</div>
+      <div class="card-body">A child born in 2021 is projected to need <strong>$122,651</strong> for a 4-year university degree (with residence). The earlier you prepare, the easier it is to manage.</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">⏰</span>
+      <div class="card-title">Time Is Your Greatest Ally</div>
+      <div class="card-body">Insuring at age 0 means lower premiums and more time to grow than starting a few years later. <strong>One decision today becomes a lifetime foundation.</strong></div>
+    </div>
+  </div>
+  <div class="hbox">
+    <div class="hbox-title">📌 In One Sentence</div>
+    <div class="hbox-body">Parents invest $240K, and the child receives a lifetime of protection + education funds + business capital + retirement income — and still leaves <strong style="color:var(--green)">millions in tax-free cash</strong> to the grandchildren.</div>
+  </div>
+</section>
+
+<!-- SLIDE 10: CTA -->
+<section class="slide slide-cta" id="s9">
+  <div class="cta-ring">👶</div>
+  <div class="slide-label" style="text-align:center;">Get Started Today</div>
+  <div class="slide-title" style="text-align:center;">Plan for a Lifetime, <span class="accent">Starting Now</span></div>
+
+  <div class="hbox" style="margin:16px 0;">
+    <div class="hbox-title">🎯 Million Dollar Baby — Key Takeaways</div>
+    <div class="hbox-body">
+      ✅ Insure at age 0, contribute $12,000/year for 20 years<br>
+      ✅ Age 18 university → withdraw $30,000/year for education<br>
+      ✅ Age 30 business → withdraw $300,000 in start-up capital<br>
+      ✅ Retirement → withdraw $40,000–$150,000/year in cash flow<br>
+      ✅ Age 100 → still leaves millions in tax-free legacy
+    </div>
+  </div>
+
+  <div class="cta-contact">
+    <div class="cta-label">🌟 Contact Your Advisor</div>
+    <div class="cc-name-row">
+      <div class="cc-avatar">👩</div>
+      <div>
+        <div class="cc-name">Elina</div>
+        <div class="cc-title">Licensed Insurance & Financial Advisor</div>
+      </div>
+    </div>
+    <div class="cc-links">
+      <a href="tel:4168267591" class="cc-link"><span class="cc-icon">📞</span><span class="cc-link-text">416-826-7591</span></a>
+      <a href="https://wa.me/14168267591" class="cc-link"><span class="cc-icon">💬</span><span class="cc-link-text">WhatsApp: 416-826-7591</span></a>
+      <a href="mailto:elina_insurance@hotmail.com" class="cc-link"><span class="cc-icon gold-bg">✉️</span><span class="cc-link-text gold">elina_insurance@hotmail.com</span></a>
+    </div>
+  </div>
+
+  <p class="disclaimer">This presentation is for general educational purposes only and does not constitute personal investment, tax, or legal advice. All figures are based on a specific case and steady dividend assumptions; actual results may vary. Please consult a licensed financial advisor and tax professional before making decisions. Insurance products underwritten by a licensed insurer.</p>
+</section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+function goTo(i) { slides[i].scrollIntoView({behavior:'smooth'}); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const i = Array.from(slides).indexOf(e.target);
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[i]) dots[i].classList.add('active');
+    }
+  });
+}, {threshold: 0.5});
+slides.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
